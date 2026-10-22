@@ -1,0 +1,21 @@
+[package]
+name = "pulldown-cmark-ltem"
+description = "LTEM tables (merged cells, multi-row headers) for pulldown-cmark"
+version.workspace = true
+edition.workspace = true
+repository.workspace = true
+license.workspace = true
+readme = "README.md"
+keywords = ["markdown", "table", "pulldown-cmark", "colspan", "rowspan"]
+categories = ["parser-implementations", "text-processing"]
+# Not published to crates.io before the repository is public.
+publish = false
+
+[dependencies]
+ltem = { path = "../ltem" }
+pulldown-cmark = { version = "0.13", default-features = false, features = ["html"] }
+
+[dev-dependencies]
+# The core's own CommonMark cell renderer, to compare tables with the core's.
+ltem = { path = "../ltem", features = ["commonmark-inline"] }
+serde_json = "1.0.100"

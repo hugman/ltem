@@ -1,0 +1,21 @@
+[package]
+name = "comrak-ltem"
+description = "LTEM tables (merged cells, multi-row headers) for comrak"
+version.workspace = true
+edition.workspace = true
+repository.workspace = true
+license.workspace = true
+readme = "README.md"
+keywords = ["markdown", "table", "comrak", "colspan", "rowspan"]
+categories = ["parser-implementations", "text-processing"]
+# Not published to crates.io before the repository is public.
+publish = false
+
+[dependencies]
+ltem = { path = "../ltem" }
+comrak = { version = "0.56", default-features = false }
+
+[dev-dependencies]
+# The core's own CommonMark cell renderer, to compare tables with the core's.
+ltem = { path = "../ltem", features = ["commonmark-inline"] }
+serde_json = "1.0.100"

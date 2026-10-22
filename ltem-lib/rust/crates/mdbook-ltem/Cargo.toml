@@ -1,0 +1,20 @@
+[package]
+name = "mdbook-ltem"
+description = "mdBook preprocessor for LTEM tables: merged cells and multi-row headers"
+version.workspace = true
+edition.workspace = true
+repository.workspace = true
+license.workspace = true
+readme = "README.md"
+keywords = ["mdbook", "markdown", "table", "colspan", "rowspan"]
+categories = ["command-line-utilities", "text-processing"]
+# Not published to crates.io before the repository is public.
+publish = false
+
+[dependencies]
+pulldown-cmark-ltem = { path = "../pulldown-cmark-ltem" }
+serde_json = "1.0.100"
+
+[dev-dependencies]
+# The core's own CommonMark cell renderer, to compare tables with the core's.
+ltem = { path = "../ltem", features = ["commonmark-inline"] }

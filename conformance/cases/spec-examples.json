@@ -1,0 +1,2473 @@
+{
+  "spec": "spec/ltem-spec.md",
+  "spec_version": "1.0",
+  "examples": [
+    {
+      "example": 1,
+      "section": "1.4 Conformance",
+      "ltem": "| Region | Q1  | Q2  |\n|--------|-----|-----|\n| Asia   | 100 | 120 |\n",
+      "html": "<table>\n<thead>\n<tr>\n<th>Region</th>\n<th>Q1</th>\n<th>Q2</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>Asia</td>\n<td>100</td>\n<td>120</td>\n</tr>\n</tbody>\n</table>\n",
+      "tables": [
+        {
+          "version": "1.0",
+          "rows": 2,
+          "cols": 3,
+          "header_rows": 1,
+          "align": [
+            null,
+            null,
+            null
+          ],
+          "cells": [
+            {
+              "row": 0,
+              "col": 0,
+              "rowspan": 1,
+              "colspan": 1,
+              "text": "Region"
+            },
+            {
+              "row": 0,
+              "col": 1,
+              "rowspan": 1,
+              "colspan": 1,
+              "text": "Q1"
+            },
+            {
+              "row": 0,
+              "col": 2,
+              "rowspan": 1,
+              "colspan": 1,
+              "text": "Q2"
+            },
+            {
+              "row": 1,
+              "col": 0,
+              "rowspan": 1,
+              "colspan": 1,
+              "text": "Asia"
+            },
+            {
+              "row": 1,
+              "col": 1,
+              "rowspan": 1,
+              "colspan": 1,
+              "text": "100"
+            },
+            {
+              "row": 1,
+              "col": 2,
+              "rowspan": 1,
+              "colspan": 1,
+              "text": "120"
+            }
+          ]
+        }
+      ],
+      "errors": []
+    },
+    {
+      "example": 2,
+      "section": "2.1 Rows and cells",
+      "ltem": "| Item      | Amount |\n|-----------|--------|\n| Revenue   | 100    |\n|　Subtotal | 60     |\n",
+      "html": "<table>\n<thead>\n<tr>\n<th>Item</th>\n<th>Amount</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>Revenue</td>\n<td>100</td>\n</tr>\n<tr>\n<td>　Subtotal</td>\n<td>60</td>\n</tr>\n</tbody>\n</table>\n",
+      "tables": [
+        {
+          "version": "1.0",
+          "rows": 3,
+          "cols": 2,
+          "header_rows": 1,
+          "align": [
+            null,
+            null
+          ],
+          "cells": [
+            {
+              "row": 0,
+              "col": 0,
+              "rowspan": 1,
+              "colspan": 1,
+              "text": "Item"
+            },
+            {
+              "row": 0,
+              "col": 1,
+              "rowspan": 1,
+              "colspan": 1,
+              "text": "Amount"
+            },
+            {
+              "row": 1,
+              "col": 0,
+              "rowspan": 1,
+              "colspan": 1,
+              "text": "Revenue"
+            },
+            {
+              "row": 1,
+              "col": 1,
+              "rowspan": 1,
+              "colspan": 1,
+              "text": "100"
+            },
+            {
+              "row": 2,
+              "col": 0,
+              "rowspan": 1,
+              "colspan": 1,
+              "text": "　Subtotal"
+            },
+            {
+              "row": 2,
+              "col": 1,
+              "rowspan": 1,
+              "colspan": 1,
+              "text": "60"
+            }
+          ]
+        }
+      ],
+      "errors": []
+    },
+    {
+      "example": 3,
+      "section": "2.1 Rows and cells",
+      "ltem": "| Series   | Condition    |\n|----------|--------------|\n| Infinite | $\\|r\\| < 1$  |\n",
+      "html": "<table>\n<thead>\n<tr>\n<th>Series</th>\n<th>Condition</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>Infinite</td>\n<td>$|r| &lt; 1$</td>\n</tr>\n</tbody>\n</table>\n",
+      "tables": [
+        {
+          "version": "1.0",
+          "rows": 2,
+          "cols": 2,
+          "header_rows": 1,
+          "align": [
+            null,
+            null
+          ],
+          "cells": [
+            {
+              "row": 0,
+              "col": 0,
+              "rowspan": 1,
+              "colspan": 1,
+              "text": "Series"
+            },
+            {
+              "row": 0,
+              "col": 1,
+              "rowspan": 1,
+              "colspan": 1,
+              "text": "Condition"
+            },
+            {
+              "row": 1,
+              "col": 0,
+              "rowspan": 1,
+              "colspan": 1,
+              "text": "Infinite"
+            },
+            {
+              "row": 1,
+              "col": 1,
+              "rowspan": 1,
+              "colspan": 1,
+              "text": "$|r| < 1$"
+            }
+          ]
+        }
+      ],
+      "errors": []
+    },
+    {
+      "example": 4,
+      "section": "2.2 The delimiter row",
+      "ltem": "Total\n:--\n",
+      "html": "<p>Total\n:--</p>\n",
+      "tables": [],
+      "errors": []
+    },
+    {
+      "example": 5,
+      "section": "2.2 The delimiter row",
+      "ltem": "| a | b |\n    |---|---|\n| 1 | 2 |\n",
+      "html": "<p>| a | b |\n|---|---|\n| 1 | 2 |</p>\n",
+      "tables": [],
+      "errors": []
+    },
+    {
+      "example": 6,
+      "section": "2.2 The delimiter row",
+      "ltem": "Size | Price\n- | -\n",
+      "html": "<p>Size | Price</p>\n<ul>\n<li>| -</li>\n</ul>\n",
+      "tables": [],
+      "errors": []
+    },
+    {
+      "example": 7,
+      "section": "2.3 Header rows",
+      "ltem": "| Region | Revenue | <<  |\n| ^^     | Q1      | Q2  |\n|--------|---------|-----|\n| Asia   | 100     | 120 |\n",
+      "html": "<table>\n<thead>\n<tr>\n<th rowspan=\"2\">Region</th>\n<th colspan=\"2\">Revenue</th>\n</tr>\n<tr>\n<th>Q1</th>\n<th>Q2</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>Asia</td>\n<td>100</td>\n<td>120</td>\n</tr>\n</tbody>\n</table>\n",
+      "tables": [
+        {
+          "version": "1.0",
+          "rows": 3,
+          "cols": 3,
+          "header_rows": 2,
+          "align": [
+            null,
+            null,
+            null
+          ],
+          "cells": [
+            {
+              "row": 0,
+              "col": 0,
+              "rowspan": 2,
+              "colspan": 1,
+              "text": "Region"
+            },
+            {
+              "row": 0,
+              "col": 1,
+              "rowspan": 1,
+              "colspan": 2,
+              "text": "Revenue"
+            },
+            {
+              "row": 1,
+              "col": 1,
+              "rowspan": 1,
+              "colspan": 1,
+              "text": "Q1"
+            },
+            {
+              "row": 1,
+              "col": 2,
+              "rowspan": 1,
+              "colspan": 1,
+              "text": "Q2"
+            },
+            {
+              "row": 2,
+              "col": 0,
+              "rowspan": 1,
+              "colspan": 1,
+              "text": "Asia"
+            },
+            {
+              "row": 2,
+              "col": 1,
+              "rowspan": 1,
+              "colspan": 1,
+              "text": "100"
+            },
+            {
+              "row": 2,
+              "col": 2,
+              "rowspan": 1,
+              "colspan": 1,
+              "text": "120"
+            }
+          ]
+        }
+      ],
+      "errors": []
+    },
+    {
+      "example": 8,
+      "section": "2.3 Header rows",
+      "ltem": "Revenue\n===\n|---|\n| 1 |\n",
+      "html": "<h1>Revenue</h1>\n<p>|---|\n| 1 |</p>\n",
+      "tables": [],
+      "errors": []
+    },
+    {
+      "example": 9,
+      "section": "2.3 Header rows",
+      "ltem": "# | Name | Score\n--|------|------\n1 | Kim  | 90\n",
+      "html": "<h1>| Name | Score</h1>\n<p>--|------|------\n1 | Kim  | 90</p>\n",
+      "tables": [],
+      "errors": []
+    },
+    {
+      "example": 10,
+      "section": "2.3 Header rows",
+      "ltem": "| Region | Q1 | Q2 |\n|--------|----|\n| Asia   | 1  |\n",
+      "html": "<p>| Region | Q1 | Q2 |\n|--------|----|\n| Asia   | 1  |</p>\n",
+      "tables": [],
+      "errors": []
+    },
+    {
+      "example": 11,
+      "section": "2.3 Header rows",
+      "ltem": "| a | b |\n|---|\n| c |\n|:-:|\n",
+      "html": "<p>| a | b |\n|---|</p>\n<table>\n<thead>\n<tr>\n<th align=\"center\">c</th>\n</tr>\n</thead>\n</table>\n",
+      "tables": [
+        {
+          "version": "1.0",
+          "rows": 1,
+          "cols": 1,
+          "header_rows": 1,
+          "align": [
+            "center"
+          ],
+          "cells": [
+            {
+              "row": 0,
+              "col": 0,
+              "rowspan": 1,
+              "colspan": 1,
+              "text": "c"
+            }
+          ]
+        }
+      ],
+      "errors": []
+    },
+    {
+      "example": 12,
+      "section": "2.3 Header rows",
+      "ltem": "Note\n| a | b |\n|---|\n|---|\n",
+      "html": "<p>Note\n| a | b |</p>\n<table>\n<thead>\n<tr>\n<th>---</th>\n</tr>\n</thead>\n</table>\n",
+      "tables": [
+        {
+          "version": "1.0",
+          "rows": 1,
+          "cols": 1,
+          "header_rows": 1,
+          "align": [
+            null
+          ],
+          "cells": [
+            {
+              "row": 0,
+              "col": 0,
+              "rowspan": 1,
+              "colspan": 1,
+              "text": "---"
+            }
+          ]
+        }
+      ],
+      "errors": []
+    },
+    {
+      "example": 13,
+      "section": "2.3 Header rows",
+      "ltem": "Quarterly revenue\n| Region | Q1  |\n|--------|-----|\n| Asia   | 100 |\n",
+      "html": "<p>Quarterly revenue</p>\n<table>\n<thead>\n<tr>\n<th>Region</th>\n<th>Q1</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>Asia</td>\n<td>100</td>\n</tr>\n</tbody>\n</table>\n",
+      "tables": [
+        {
+          "version": "1.0",
+          "rows": 2,
+          "cols": 2,
+          "header_rows": 1,
+          "align": [
+            null,
+            null
+          ],
+          "cells": [
+            {
+              "row": 0,
+              "col": 0,
+              "rowspan": 1,
+              "colspan": 1,
+              "text": "Region"
+            },
+            {
+              "row": 0,
+              "col": 1,
+              "rowspan": 1,
+              "colspan": 1,
+              "text": "Q1"
+            },
+            {
+              "row": 1,
+              "col": 0,
+              "rowspan": 1,
+              "colspan": 1,
+              "text": "Asia"
+            },
+            {
+              "row": 1,
+              "col": 1,
+              "rowspan": 1,
+              "colspan": 1,
+              "text": "100"
+            }
+          ]
+        }
+      ],
+      "errors": []
+    },
+    {
+      "example": 14,
+      "section": "2.4 Body rows",
+      "ltem": "| Step | Action |\n|------|--------|\n| 1    | Mix    |\n- Stir well\n",
+      "html": "<table>\n<thead>\n<tr>\n<th>Step</th>\n<th>Action</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>1</td>\n<td>Mix</td>\n</tr>\n</tbody>\n</table>\n<ul>\n<li>Stir well</li>\n</ul>\n",
+      "tables": [
+        {
+          "version": "1.0",
+          "rows": 2,
+          "cols": 2,
+          "header_rows": 1,
+          "align": [
+            null,
+            null
+          ],
+          "cells": [
+            {
+              "row": 0,
+              "col": 0,
+              "rowspan": 1,
+              "colspan": 1,
+              "text": "Step"
+            },
+            {
+              "row": 0,
+              "col": 1,
+              "rowspan": 1,
+              "colspan": 1,
+              "text": "Action"
+            },
+            {
+              "row": 1,
+              "col": 0,
+              "rowspan": 1,
+              "colspan": 1,
+              "text": "1"
+            },
+            {
+              "row": 1,
+              "col": 1,
+              "rowspan": 1,
+              "colspan": 1,
+              "text": "Mix"
+            }
+          ]
+        }
+      ],
+      "errors": []
+    },
+    {
+      "example": 15,
+      "section": "2.4 Body rows",
+      "ltem": "| Item |\n|------|\n| 1    |\n　\n| 2    |\n",
+      "html": "<table>\n<thead>\n<tr>\n<th>Item</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>1</td>\n</tr>\n<tr>\n<td>　</td>\n</tr>\n<tr>\n<td>2</td>\n</tr>\n</tbody>\n</table>\n",
+      "tables": [
+        {
+          "version": "1.0",
+          "rows": 4,
+          "cols": 1,
+          "header_rows": 1,
+          "align": [
+            null
+          ],
+          "cells": [
+            {
+              "row": 0,
+              "col": 0,
+              "rowspan": 1,
+              "colspan": 1,
+              "text": "Item"
+            },
+            {
+              "row": 1,
+              "col": 0,
+              "rowspan": 1,
+              "colspan": 1,
+              "text": "1"
+            },
+            {
+              "row": 2,
+              "col": 0,
+              "rowspan": 1,
+              "colspan": 1,
+              "text": "　"
+            },
+            {
+              "row": 3,
+              "col": 0,
+              "rowspan": 1,
+              "colspan": 1,
+              "text": "2"
+            }
+          ]
+        }
+      ],
+      "errors": []
+    },
+    {
+      "example": 16,
+      "section": "3.2 Grid rows and compact rows",
+      "ltem": "| Revenue {c:2} |    |\n|---------------|----|\n| Q1            | Q2 |\n",
+      "html": "<table>\n<thead>\n<tr>\n<th colspan=\"2\">Revenue</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>Q1</td>\n<td>Q2</td>\n</tr>\n</tbody>\n</table>\n",
+      "tables": [
+        {
+          "version": "1.0",
+          "rows": 2,
+          "cols": 2,
+          "header_rows": 1,
+          "align": [
+            null,
+            null
+          ],
+          "cells": [
+            {
+              "row": 0,
+              "col": 0,
+              "rowspan": 1,
+              "colspan": 2,
+              "text": "Revenue"
+            },
+            {
+              "row": 1,
+              "col": 0,
+              "rowspan": 1,
+              "colspan": 1,
+              "text": "Q1"
+            },
+            {
+              "row": 1,
+              "col": 1,
+              "rowspan": 1,
+              "colspan": 1,
+              "text": "Q2"
+            }
+          ]
+        }
+      ],
+      "errors": []
+    },
+    {
+      "example": 17,
+      "section": "3.2 Grid rows and compact rows",
+      "ltem": "| Revenue {c:2} |\n|---------------|----|\n| Q1            | Q2 |\n",
+      "html": "<table>\n<thead>\n<tr>\n<th colspan=\"2\">Revenue</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>Q1</td>\n<td>Q2</td>\n</tr>\n</tbody>\n</table>\n",
+      "tables": [
+        {
+          "version": "1.0",
+          "rows": 2,
+          "cols": 2,
+          "header_rows": 1,
+          "align": [
+            null,
+            null
+          ],
+          "cells": [
+            {
+              "row": 0,
+              "col": 0,
+              "rowspan": 1,
+              "colspan": 2,
+              "text": "Revenue"
+            },
+            {
+              "row": 1,
+              "col": 0,
+              "rowspan": 1,
+              "colspan": 1,
+              "text": "Q1"
+            },
+            {
+              "row": 1,
+              "col": 1,
+              "rowspan": 1,
+              "colspan": 1,
+              "text": "Q2"
+            }
+          ]
+        }
+      ],
+      "errors": []
+    },
+    {
+      "example": 18,
+      "section": "3.2 Grid rows and compact rows",
+      "ltem": "| Product | Quarter | Sales |\n|---------|---------|-------|\n| Phone {r:2} | Q1  | 100   |\n|         | Q2      | 120   |\n",
+      "html": "<table>\n<thead>\n<tr>\n<th>Product</th>\n<th>Quarter</th>\n<th>Sales</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td rowspan=\"2\">Phone</td>\n<td>Q1</td>\n<td>100</td>\n</tr>\n<tr>\n<td>Q2</td>\n<td>120</td>\n</tr>\n</tbody>\n</table>\n",
+      "tables": [
+        {
+          "version": "1.0",
+          "rows": 3,
+          "cols": 3,
+          "header_rows": 1,
+          "align": [
+            null,
+            null,
+            null
+          ],
+          "cells": [
+            {
+              "row": 0,
+              "col": 0,
+              "rowspan": 1,
+              "colspan": 1,
+              "text": "Product"
+            },
+            {
+              "row": 0,
+              "col": 1,
+              "rowspan": 1,
+              "colspan": 1,
+              "text": "Quarter"
+            },
+            {
+              "row": 0,
+              "col": 2,
+              "rowspan": 1,
+              "colspan": 1,
+              "text": "Sales"
+            },
+            {
+              "row": 1,
+              "col": 0,
+              "rowspan": 2,
+              "colspan": 1,
+              "text": "Phone"
+            },
+            {
+              "row": 1,
+              "col": 1,
+              "rowspan": 1,
+              "colspan": 1,
+              "text": "Q1"
+            },
+            {
+              "row": 1,
+              "col": 2,
+              "rowspan": 1,
+              "colspan": 1,
+              "text": "100"
+            },
+            {
+              "row": 2,
+              "col": 1,
+              "rowspan": 1,
+              "colspan": 1,
+              "text": "Q2"
+            },
+            {
+              "row": 2,
+              "col": 2,
+              "rowspan": 1,
+              "colspan": 1,
+              "text": "120"
+            }
+          ]
+        }
+      ],
+      "errors": []
+    },
+    {
+      "example": 19,
+      "section": "3.2 Grid rows and compact rows",
+      "ltem": "| Product | Quarter | Sales |\n|---------|---------|-------|\n| Phone {r:2} | Q1  | 100   |\n| Q2      | 120     |\n",
+      "html": "<table>\n<thead>\n<tr>\n<th>Product</th>\n<th>Quarter</th>\n<th>Sales</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td rowspan=\"2\">Phone</td>\n<td>Q1</td>\n<td>100</td>\n</tr>\n<tr>\n<td>Q2</td>\n<td>120</td>\n</tr>\n</tbody>\n</table>\n",
+      "tables": [
+        {
+          "version": "1.0",
+          "rows": 3,
+          "cols": 3,
+          "header_rows": 1,
+          "align": [
+            null,
+            null,
+            null
+          ],
+          "cells": [
+            {
+              "row": 0,
+              "col": 0,
+              "rowspan": 1,
+              "colspan": 1,
+              "text": "Product"
+            },
+            {
+              "row": 0,
+              "col": 1,
+              "rowspan": 1,
+              "colspan": 1,
+              "text": "Quarter"
+            },
+            {
+              "row": 0,
+              "col": 2,
+              "rowspan": 1,
+              "colspan": 1,
+              "text": "Sales"
+            },
+            {
+              "row": 1,
+              "col": 0,
+              "rowspan": 2,
+              "colspan": 1,
+              "text": "Phone"
+            },
+            {
+              "row": 1,
+              "col": 1,
+              "rowspan": 1,
+              "colspan": 1,
+              "text": "Q1"
+            },
+            {
+              "row": 1,
+              "col": 2,
+              "rowspan": 1,
+              "colspan": 1,
+              "text": "100"
+            },
+            {
+              "row": 2,
+              "col": 1,
+              "rowspan": 1,
+              "colspan": 1,
+              "text": "Q2"
+            },
+            {
+              "row": 2,
+              "col": 2,
+              "rowspan": 1,
+              "colspan": 1,
+              "text": "120"
+            }
+          ]
+        }
+      ],
+      "errors": []
+    },
+    {
+      "example": 20,
+      "section": "3.2 Grid rows and compact rows",
+      "ltem": "| A    | B    |\n|------|------|\n| x {r:2} | y {r:2} |\n|      |\n| 1    | 2    |\n",
+      "html": "<table>\n<thead>\n<tr>\n<th>A</th>\n<th>B</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td rowspan=\"2\">x</td>\n<td rowspan=\"2\">y</td>\n</tr>\n<tr>\n</tr>\n<tr>\n<td>1</td>\n<td>2</td>\n</tr>\n</tbody>\n</table>\n",
+      "tables": [
+        {
+          "version": "1.0",
+          "rows": 4,
+          "cols": 2,
+          "header_rows": 1,
+          "align": [
+            null,
+            null
+          ],
+          "cells": [
+            {
+              "row": 0,
+              "col": 0,
+              "rowspan": 1,
+              "colspan": 1,
+              "text": "A"
+            },
+            {
+              "row": 0,
+              "col": 1,
+              "rowspan": 1,
+              "colspan": 1,
+              "text": "B"
+            },
+            {
+              "row": 1,
+              "col": 0,
+              "rowspan": 2,
+              "colspan": 1,
+              "text": "x"
+            },
+            {
+              "row": 1,
+              "col": 1,
+              "rowspan": 2,
+              "colspan": 1,
+              "text": "y"
+            },
+            {
+              "row": 3,
+              "col": 0,
+              "rowspan": 1,
+              "colspan": 1,
+              "text": "1"
+            },
+            {
+              "row": 3,
+              "col": 1,
+              "rowspan": 1,
+              "colspan": 1,
+              "text": "2"
+            }
+          ]
+        }
+      ],
+      "errors": []
+    },
+    {
+      "example": 21,
+      "section": "3.3 Placing a cell",
+      "ltem": "| Region {c:2} | <<  | Total |\n| Area         | Rep | Sum   |\n|--------------|-----|-------|\n| North        | Tom | 110   |\n",
+      "html": "<table>\n<thead>\n<tr>\n<th colspan=\"2\">Region</th>\n<th>Total</th>\n</tr>\n<tr>\n<th>Area</th>\n<th>Rep</th>\n<th>Sum</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>North</td>\n<td>Tom</td>\n<td>110</td>\n</tr>\n</tbody>\n</table>\n",
+      "tables": [
+        {
+          "version": "1.0",
+          "rows": 3,
+          "cols": 3,
+          "header_rows": 2,
+          "align": [
+            null,
+            null,
+            null
+          ],
+          "cells": [
+            {
+              "row": 0,
+              "col": 0,
+              "rowspan": 1,
+              "colspan": 2,
+              "text": "Region"
+            },
+            {
+              "row": 0,
+              "col": 2,
+              "rowspan": 1,
+              "colspan": 1,
+              "text": "Total"
+            },
+            {
+              "row": 1,
+              "col": 0,
+              "rowspan": 1,
+              "colspan": 1,
+              "text": "Area"
+            },
+            {
+              "row": 1,
+              "col": 1,
+              "rowspan": 1,
+              "colspan": 1,
+              "text": "Rep"
+            },
+            {
+              "row": 1,
+              "col": 2,
+              "rowspan": 1,
+              "colspan": 1,
+              "text": "Sum"
+            },
+            {
+              "row": 2,
+              "col": 0,
+              "rowspan": 1,
+              "colspan": 1,
+              "text": "North"
+            },
+            {
+              "row": 2,
+              "col": 1,
+              "rowspan": 1,
+              "colspan": 1,
+              "text": "Tom"
+            },
+            {
+              "row": 2,
+              "col": 2,
+              "rowspan": 1,
+              "colspan": 1,
+              "text": "110"
+            }
+          ]
+        }
+      ],
+      "errors": []
+    },
+    {
+      "example": 22,
+      "section": "3.4 Markers",
+      "ltem": "| Item  | Specs | <<     | <<    |\n|-------|-------|--------|-------|\n| Phone | 6.1\"  | 170 g  | 128GB |\n| Note  | Same as phone | << | <<   |\n",
+      "html": "<table>\n<thead>\n<tr>\n<th>Item</th>\n<th colspan=\"3\">Specs</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>Phone</td>\n<td>6.1&quot;</td>\n<td>170 g</td>\n<td>128GB</td>\n</tr>\n<tr>\n<td>Note</td>\n<td colspan=\"3\">Same as phone</td>\n</tr>\n</tbody>\n</table>\n",
+      "tables": [
+        {
+          "version": "1.0",
+          "rows": 3,
+          "cols": 4,
+          "header_rows": 1,
+          "align": [
+            null,
+            null,
+            null,
+            null
+          ],
+          "cells": [
+            {
+              "row": 0,
+              "col": 0,
+              "rowspan": 1,
+              "colspan": 1,
+              "text": "Item"
+            },
+            {
+              "row": 0,
+              "col": 1,
+              "rowspan": 1,
+              "colspan": 3,
+              "text": "Specs"
+            },
+            {
+              "row": 1,
+              "col": 0,
+              "rowspan": 1,
+              "colspan": 1,
+              "text": "Phone"
+            },
+            {
+              "row": 1,
+              "col": 1,
+              "rowspan": 1,
+              "colspan": 1,
+              "text": "6.1\""
+            },
+            {
+              "row": 1,
+              "col": 2,
+              "rowspan": 1,
+              "colspan": 1,
+              "text": "170 g"
+            },
+            {
+              "row": 1,
+              "col": 3,
+              "rowspan": 1,
+              "colspan": 1,
+              "text": "128GB"
+            },
+            {
+              "row": 2,
+              "col": 0,
+              "rowspan": 1,
+              "colspan": 1,
+              "text": "Note"
+            },
+            {
+              "row": 2,
+              "col": 1,
+              "rowspan": 1,
+              "colspan": 3,
+              "text": "Same as phone"
+            }
+          ]
+        }
+      ],
+      "errors": []
+    },
+    {
+      "example": 23,
+      "section": "3.4 Markers",
+      "ltem": "| Region | Product | Sales |\n|--------|---------|-------|\n| Asia   | Phone   | 1.2M  |\n| ^^     | Laptop  | 0.8M  |\n| Europe | Phone   | 0.9M  |\n",
+      "html": "<table>\n<thead>\n<tr>\n<th>Region</th>\n<th>Product</th>\n<th>Sales</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td rowspan=\"2\">Asia</td>\n<td>Phone</td>\n<td>1.2M</td>\n</tr>\n<tr>\n<td>Laptop</td>\n<td>0.8M</td>\n</tr>\n<tr>\n<td>Europe</td>\n<td>Phone</td>\n<td>0.9M</td>\n</tr>\n</tbody>\n</table>\n",
+      "tables": [
+        {
+          "version": "1.0",
+          "rows": 4,
+          "cols": 3,
+          "header_rows": 1,
+          "align": [
+            null,
+            null,
+            null
+          ],
+          "cells": [
+            {
+              "row": 0,
+              "col": 0,
+              "rowspan": 1,
+              "colspan": 1,
+              "text": "Region"
+            },
+            {
+              "row": 0,
+              "col": 1,
+              "rowspan": 1,
+              "colspan": 1,
+              "text": "Product"
+            },
+            {
+              "row": 0,
+              "col": 2,
+              "rowspan": 1,
+              "colspan": 1,
+              "text": "Sales"
+            },
+            {
+              "row": 1,
+              "col": 0,
+              "rowspan": 2,
+              "colspan": 1,
+              "text": "Asia"
+            },
+            {
+              "row": 1,
+              "col": 1,
+              "rowspan": 1,
+              "colspan": 1,
+              "text": "Phone"
+            },
+            {
+              "row": 1,
+              "col": 2,
+              "rowspan": 1,
+              "colspan": 1,
+              "text": "1.2M"
+            },
+            {
+              "row": 2,
+              "col": 1,
+              "rowspan": 1,
+              "colspan": 1,
+              "text": "Laptop"
+            },
+            {
+              "row": 2,
+              "col": 2,
+              "rowspan": 1,
+              "colspan": 1,
+              "text": "0.8M"
+            },
+            {
+              "row": 3,
+              "col": 0,
+              "rowspan": 1,
+              "colspan": 1,
+              "text": "Europe"
+            },
+            {
+              "row": 3,
+              "col": 1,
+              "rowspan": 1,
+              "colspan": 1,
+              "text": "Phone"
+            },
+            {
+              "row": 3,
+              "col": 2,
+              "rowspan": 1,
+              "colspan": 1,
+              "text": "0.9M"
+            }
+          ]
+        }
+      ],
+      "errors": []
+    },
+    {
+      "example": 24,
+      "section": "3.4 Markers",
+      "ltem": "| Summary | <<  | Note |\n| ^^      | <<  | Q4   |\n|---------|-----|------|\n| 1       | 2   | 3    |\n",
+      "html": "<table>\n<thead>\n<tr>\n<th colspan=\"2\" rowspan=\"2\">Summary</th>\n<th>Note</th>\n</tr>\n<tr>\n<th>Q4</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>1</td>\n<td>2</td>\n<td>3</td>\n</tr>\n</tbody>\n</table>\n",
+      "tables": [
+        {
+          "version": "1.0",
+          "rows": 3,
+          "cols": 3,
+          "header_rows": 2,
+          "align": [
+            null,
+            null,
+            null
+          ],
+          "cells": [
+            {
+              "row": 0,
+              "col": 0,
+              "rowspan": 2,
+              "colspan": 2,
+              "text": "Summary"
+            },
+            {
+              "row": 0,
+              "col": 2,
+              "rowspan": 1,
+              "colspan": 1,
+              "text": "Note"
+            },
+            {
+              "row": 1,
+              "col": 2,
+              "rowspan": 1,
+              "colspan": 1,
+              "text": "Q4"
+            },
+            {
+              "row": 2,
+              "col": 0,
+              "rowspan": 1,
+              "colspan": 1,
+              "text": "1"
+            },
+            {
+              "row": 2,
+              "col": 1,
+              "rowspan": 1,
+              "colspan": 1,
+              "text": "2"
+            },
+            {
+              "row": 2,
+              "col": 2,
+              "rowspan": 1,
+              "colspan": 1,
+              "text": "3"
+            }
+          ]
+        }
+      ],
+      "errors": []
+    },
+    {
+      "example": 25,
+      "section": "3.4 Markers",
+      "ltem": "| Summary {c:2,r:2} |   | Note |\n|                   |   | Q4   |\n|-------------------|---|------|\n| 1                 | 2 | 3    |\n",
+      "html": "<table>\n<thead>\n<tr>\n<th colspan=\"2\" rowspan=\"2\">Summary</th>\n<th>Note</th>\n</tr>\n<tr>\n<th>Q4</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>1</td>\n<td>2</td>\n<td>3</td>\n</tr>\n</tbody>\n</table>\n",
+      "tables": [
+        {
+          "version": "1.0",
+          "rows": 3,
+          "cols": 3,
+          "header_rows": 2,
+          "align": [
+            null,
+            null,
+            null
+          ],
+          "cells": [
+            {
+              "row": 0,
+              "col": 0,
+              "rowspan": 2,
+              "colspan": 2,
+              "text": "Summary"
+            },
+            {
+              "row": 0,
+              "col": 2,
+              "rowspan": 1,
+              "colspan": 1,
+              "text": "Note"
+            },
+            {
+              "row": 1,
+              "col": 2,
+              "rowspan": 1,
+              "colspan": 1,
+              "text": "Q4"
+            },
+            {
+              "row": 2,
+              "col": 0,
+              "rowspan": 1,
+              "colspan": 1,
+              "text": "1"
+            },
+            {
+              "row": 2,
+              "col": 1,
+              "rowspan": 1,
+              "colspan": 1,
+              "text": "2"
+            },
+            {
+              "row": 2,
+              "col": 2,
+              "rowspan": 1,
+              "colspan": 1,
+              "text": "3"
+            }
+          ]
+        }
+      ],
+      "errors": []
+    },
+    {
+      "example": 26,
+      "section": "3.4 Markers",
+      "ltem": "| Summary {c:2,r:2} | Note |\n| Q4 |\n|----|----|----|\n| 1  | 2  | 3  |\n",
+      "html": "<table>\n<thead>\n<tr>\n<th colspan=\"2\" rowspan=\"2\">Summary</th>\n<th>Note</th>\n</tr>\n<tr>\n<th>Q4</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>1</td>\n<td>2</td>\n<td>3</td>\n</tr>\n</tbody>\n</table>\n",
+      "tables": [
+        {
+          "version": "1.0",
+          "rows": 3,
+          "cols": 3,
+          "header_rows": 2,
+          "align": [
+            null,
+            null,
+            null
+          ],
+          "cells": [
+            {
+              "row": 0,
+              "col": 0,
+              "rowspan": 2,
+              "colspan": 2,
+              "text": "Summary"
+            },
+            {
+              "row": 0,
+              "col": 2,
+              "rowspan": 1,
+              "colspan": 1,
+              "text": "Note"
+            },
+            {
+              "row": 1,
+              "col": 2,
+              "rowspan": 1,
+              "colspan": 1,
+              "text": "Q4"
+            },
+            {
+              "row": 2,
+              "col": 0,
+              "rowspan": 1,
+              "colspan": 1,
+              "text": "1"
+            },
+            {
+              "row": 2,
+              "col": 1,
+              "rowspan": 1,
+              "colspan": 1,
+              "text": "2"
+            },
+            {
+              "row": 2,
+              "col": 2,
+              "rowspan": 1,
+              "colspan": 1,
+              "text": "3"
+            }
+          ]
+        }
+      ],
+      "errors": []
+    },
+    {
+      "example": 27,
+      "section": "3.4 Markers",
+      "ltem": "| A | B |\n|---|---|\n| << | 1 |\n",
+      "html": "<table>\n<thead>\n<tr>\n<th>A</th>\n<th>B</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>&lt;&lt;</td>\n<td>1</td>\n</tr>\n</tbody>\n</table>\n",
+      "tables": [
+        {
+          "version": "1.0",
+          "rows": 2,
+          "cols": 2,
+          "header_rows": 1,
+          "align": [
+            null,
+            null
+          ],
+          "cells": [
+            {
+              "row": 0,
+              "col": 0,
+              "rowspan": 1,
+              "colspan": 1,
+              "text": "A"
+            },
+            {
+              "row": 0,
+              "col": 1,
+              "rowspan": 1,
+              "colspan": 1,
+              "text": "B"
+            },
+            {
+              "row": 1,
+              "col": 0,
+              "rowspan": 1,
+              "colspan": 1,
+              "text": "<<"
+            },
+            {
+              "row": 1,
+              "col": 1,
+              "rowspan": 1,
+              "colspan": 1,
+              "text": "1"
+            }
+          ]
+        }
+      ],
+      "errors": [
+        {
+          "rule": "V13",
+          "row": 1,
+          "col": 0
+        }
+      ]
+    },
+    {
+      "example": 28,
+      "section": "3.5 Header cells",
+      "ltem": "| Region | Q1  |\n|--------|-----|\n| ^^     | 100 |\n",
+      "html": "<table>\n<thead>\n<tr>\n<th>Region</th>\n<th>Q1</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>^^</td>\n<td>100</td>\n</tr>\n</tbody>\n</table>\n",
+      "tables": [
+        {
+          "version": "1.0",
+          "rows": 2,
+          "cols": 2,
+          "header_rows": 1,
+          "align": [
+            null,
+            null
+          ],
+          "cells": [
+            {
+              "row": 0,
+              "col": 0,
+              "rowspan": 1,
+              "colspan": 1,
+              "text": "Region"
+            },
+            {
+              "row": 0,
+              "col": 1,
+              "rowspan": 1,
+              "colspan": 1,
+              "text": "Q1"
+            },
+            {
+              "row": 1,
+              "col": 0,
+              "rowspan": 1,
+              "colspan": 1,
+              "text": "^^"
+            },
+            {
+              "row": 1,
+              "col": 1,
+              "rowspan": 1,
+              "colspan": 1,
+              "text": "100"
+            }
+          ]
+        }
+      ],
+      "errors": [
+        {
+          "rule": "V7",
+          "row": 1,
+          "col": 0
+        }
+      ]
+    },
+    {
+      "example": 29,
+      "section": "3.6 Invalid tables",
+      "ltem": "| Revenue {c:2} | Q2 | Total |\n|---------------|----|-------|\n| 1             | 2  | 3     |\n",
+      "html": "<table>\n<thead>\n<tr>\n<th colspan=\"2\">Revenue</th>\n<th>Total</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>1</td>\n<td>2</td>\n<td>3</td>\n</tr>\n</tbody>\n</table>\n",
+      "tables": [
+        {
+          "version": "1.0",
+          "rows": 2,
+          "cols": 3,
+          "header_rows": 1,
+          "align": [
+            null,
+            null,
+            null
+          ],
+          "cells": [
+            {
+              "row": 0,
+              "col": 0,
+              "rowspan": 1,
+              "colspan": 2,
+              "text": "Revenue"
+            },
+            {
+              "row": 0,
+              "col": 2,
+              "rowspan": 1,
+              "colspan": 1,
+              "text": "Total"
+            },
+            {
+              "row": 1,
+              "col": 0,
+              "rowspan": 1,
+              "colspan": 1,
+              "text": "1"
+            },
+            {
+              "row": 1,
+              "col": 1,
+              "rowspan": 1,
+              "colspan": 1,
+              "text": "2"
+            },
+            {
+              "row": 1,
+              "col": 2,
+              "rowspan": 1,
+              "colspan": 1,
+              "text": "3"
+            }
+          ]
+        }
+      ],
+      "errors": [
+        {
+          "rule": "V6",
+          "row": 0,
+          "col": 1
+        }
+      ]
+    },
+    {
+      "example": 30,
+      "section": "3.6 Invalid tables",
+      "ltem": "| A | B {c:3} |\n|---|---------|\n| 1 | 2       |\n",
+      "html": "<table>\n<thead>\n<tr>\n<th>A</th>\n<th>B</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>1</td>\n<td>2</td>\n</tr>\n</tbody>\n</table>\n",
+      "tables": [
+        {
+          "version": "1.0",
+          "rows": 2,
+          "cols": 2,
+          "header_rows": 1,
+          "align": [
+            null,
+            null
+          ],
+          "cells": [
+            {
+              "row": 0,
+              "col": 0,
+              "rowspan": 1,
+              "colspan": 1,
+              "text": "A"
+            },
+            {
+              "row": 0,
+              "col": 1,
+              "rowspan": 1,
+              "colspan": 1,
+              "text": "B"
+            },
+            {
+              "row": 1,
+              "col": 0,
+              "rowspan": 1,
+              "colspan": 1,
+              "text": "1"
+            },
+            {
+              "row": 1,
+              "col": 1,
+              "rowspan": 1,
+              "colspan": 1,
+              "text": "2"
+            }
+          ]
+        }
+      ],
+      "errors": [
+        {
+          "rule": "V2",
+          "row": 0,
+          "col": 1
+        }
+      ]
+    },
+    {
+      "example": 31,
+      "section": "3.6 Invalid tables",
+      "ltem": "| A | B | C |\n|---|---|---|\n| 1 | 2 |\n| 1 | 2 | 3 | 4 |\n",
+      "html": "<table>\n<thead>\n<tr>\n<th>A</th>\n<th>B</th>\n<th>C</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>1</td>\n<td>2</td>\n<td></td>\n</tr>\n<tr>\n<td>1</td>\n<td>2</td>\n<td>3</td>\n</tr>\n</tbody>\n</table>\n",
+      "tables": [
+        {
+          "version": "1.0",
+          "rows": 3,
+          "cols": 3,
+          "header_rows": 1,
+          "align": [
+            null,
+            null,
+            null
+          ],
+          "cells": [
+            {
+              "row": 0,
+              "col": 0,
+              "rowspan": 1,
+              "colspan": 1,
+              "text": "A"
+            },
+            {
+              "row": 0,
+              "col": 1,
+              "rowspan": 1,
+              "colspan": 1,
+              "text": "B"
+            },
+            {
+              "row": 0,
+              "col": 2,
+              "rowspan": 1,
+              "colspan": 1,
+              "text": "C"
+            },
+            {
+              "row": 1,
+              "col": 0,
+              "rowspan": 1,
+              "colspan": 1,
+              "text": "1"
+            },
+            {
+              "row": 1,
+              "col": 1,
+              "rowspan": 1,
+              "colspan": 1,
+              "text": "2"
+            },
+            {
+              "row": 1,
+              "col": 2,
+              "rowspan": 1,
+              "colspan": 1,
+              "text": ""
+            },
+            {
+              "row": 2,
+              "col": 0,
+              "rowspan": 1,
+              "colspan": 1,
+              "text": "1"
+            },
+            {
+              "row": 2,
+              "col": 1,
+              "rowspan": 1,
+              "colspan": 1,
+              "text": "2"
+            },
+            {
+              "row": 2,
+              "col": 2,
+              "rowspan": 1,
+              "colspan": 1,
+              "text": "3"
+            }
+          ]
+        }
+      ],
+      "errors": [
+        {
+          "rule": "V14",
+          "row": 1,
+          "col": null
+        },
+        {
+          "rule": "V14",
+          "row": 2,
+          "col": null
+        }
+      ]
+    },
+    {
+      "example": 32,
+      "section": "4.1 Inlines",
+      "ltem": "| **Revenue** | << |\n|-------------|----|\n| 100         | 120 |\n",
+      "html": "<table>\n<thead>\n<tr>\n<th colspan=\"2\"><strong>Revenue</strong></th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>100</td>\n<td>120</td>\n</tr>\n</tbody>\n</table>\n",
+      "tables": [
+        {
+          "version": "1.0",
+          "rows": 2,
+          "cols": 2,
+          "header_rows": 1,
+          "align": [
+            null,
+            null
+          ],
+          "cells": [
+            {
+              "row": 0,
+              "col": 0,
+              "rowspan": 1,
+              "colspan": 2,
+              "text": "**Revenue**"
+            },
+            {
+              "row": 1,
+              "col": 0,
+              "rowspan": 1,
+              "colspan": 1,
+              "text": "100"
+            },
+            {
+              "row": 1,
+              "col": 1,
+              "rowspan": 1,
+              "colspan": 1,
+              "text": "120"
+            }
+          ]
+        }
+      ],
+      "errors": []
+    },
+    {
+      "example": 33,
+      "section": "4.2 Line breaks",
+      "ltem": "| Name  | Address                  |\n|-------|--------------------------|\n| Alice | 123 Main St \\\\ Apt 4B    |\n",
+      "html": "<table>\n<thead>\n<tr>\n<th>Name</th>\n<th>Address</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>Alice</td>\n<td>123 Main St<br />Apt 4B</td>\n</tr>\n</tbody>\n</table>\n",
+      "tables": [
+        {
+          "version": "1.0",
+          "rows": 2,
+          "cols": 2,
+          "header_rows": 1,
+          "align": [
+            null,
+            null
+          ],
+          "cells": [
+            {
+              "row": 0,
+              "col": 0,
+              "rowspan": 1,
+              "colspan": 1,
+              "text": "Name"
+            },
+            {
+              "row": 0,
+              "col": 1,
+              "rowspan": 1,
+              "colspan": 1,
+              "text": "Address"
+            },
+            {
+              "row": 1,
+              "col": 0,
+              "rowspan": 1,
+              "colspan": 1,
+              "text": "Alice"
+            },
+            {
+              "row": 1,
+              "col": 1,
+              "rowspan": 1,
+              "colspan": 1,
+              "text": "123 Main St\nApt 4B"
+            }
+          ]
+        }
+      ],
+      "errors": []
+    },
+    {
+      "example": 34,
+      "section": "4.2 Line breaks",
+      "ltem": "| Feature | Details                          |\n|---------|----------------------------------|\n| Speed   | - 2x faster \\\\ - 50% less memory |\n",
+      "html": "<table>\n<thead>\n<tr>\n<th>Feature</th>\n<th>Details</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>Speed</td>\n<td>- 2x faster<br />- 50% less memory</td>\n</tr>\n</tbody>\n</table>\n",
+      "tables": [
+        {
+          "version": "1.0",
+          "rows": 2,
+          "cols": 2,
+          "header_rows": 1,
+          "align": [
+            null,
+            null
+          ],
+          "cells": [
+            {
+              "row": 0,
+              "col": 0,
+              "rowspan": 1,
+              "colspan": 1,
+              "text": "Feature"
+            },
+            {
+              "row": 0,
+              "col": 1,
+              "rowspan": 1,
+              "colspan": 1,
+              "text": "Details"
+            },
+            {
+              "row": 1,
+              "col": 0,
+              "rowspan": 1,
+              "colspan": 1,
+              "text": "Speed"
+            },
+            {
+              "row": 1,
+              "col": 1,
+              "rowspan": 1,
+              "colspan": 1,
+              "text": "- 2x faster\n- 50% less memory"
+            }
+          ]
+        }
+      ],
+      "errors": []
+    },
+    {
+      "example": 35,
+      "section": "4.3 Escapes",
+      "ltem": "| Operator | Example     |\n|----------|-------------|\n| \\<<      | x \\{c:2}    |\n| \\^^      | a << b      |\n",
+      "html": "<table>\n<thead>\n<tr>\n<th>Operator</th>\n<th>Example</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>&lt;&lt;</td>\n<td>x {c:2}</td>\n</tr>\n<tr>\n<td>^^</td>\n<td>a &lt;&lt; b</td>\n</tr>\n</tbody>\n</table>\n",
+      "tables": [
+        {
+          "version": "1.0",
+          "rows": 3,
+          "cols": 2,
+          "header_rows": 1,
+          "align": [
+            null,
+            null
+          ],
+          "cells": [
+            {
+              "row": 0,
+              "col": 0,
+              "rowspan": 1,
+              "colspan": 1,
+              "text": "Operator"
+            },
+            {
+              "row": 0,
+              "col": 1,
+              "rowspan": 1,
+              "colspan": 1,
+              "text": "Example"
+            },
+            {
+              "row": 1,
+              "col": 0,
+              "rowspan": 1,
+              "colspan": 1,
+              "text": "<<"
+            },
+            {
+              "row": 1,
+              "col": 1,
+              "rowspan": 1,
+              "colspan": 1,
+              "text": "x {c:2}"
+            },
+            {
+              "row": 2,
+              "col": 0,
+              "rowspan": 1,
+              "colspan": 1,
+              "text": "^^"
+            },
+            {
+              "row": 2,
+              "col": 1,
+              "rowspan": 1,
+              "colspan": 1,
+              "text": "a << b"
+            }
+          ]
+        }
+      ],
+      "errors": []
+    },
+    {
+      "example": 36,
+      "section": "5. Validation rules",
+      "ltem": "| A {c:0,c:3} | B |\n|-------------|---|\n| 1           | 2 |\n",
+      "html": "<table>\n<thead>\n<tr>\n<th>A</th>\n<th>B</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>1</td>\n<td>2</td>\n</tr>\n</tbody>\n</table>\n",
+      "tables": [
+        {
+          "version": "1.0",
+          "rows": 2,
+          "cols": 2,
+          "header_rows": 1,
+          "align": [
+            null,
+            null
+          ],
+          "cells": [
+            {
+              "row": 0,
+              "col": 0,
+              "rowspan": 1,
+              "colspan": 1,
+              "text": "A"
+            },
+            {
+              "row": 0,
+              "col": 1,
+              "rowspan": 1,
+              "colspan": 1,
+              "text": "B"
+            },
+            {
+              "row": 1,
+              "col": 0,
+              "rowspan": 1,
+              "colspan": 1,
+              "text": "1"
+            },
+            {
+              "row": 1,
+              "col": 1,
+              "rowspan": 1,
+              "colspan": 1,
+              "text": "2"
+            }
+          ]
+        }
+      ],
+      "errors": [
+        {
+          "rule": "V1",
+          "row": 0,
+          "col": 0
+        },
+        {
+          "rule": "V1",
+          "row": 0,
+          "col": 0
+        }
+      ]
+    },
+    {
+      "example": 37,
+      "section": "5. Validation rules",
+      "ltem": "| A       | B |\n|---------|---|\n| x {r:3} | y |\n| z |\n",
+      "html": "<table>\n<thead>\n<tr>\n<th>A</th>\n<th>B</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td rowspan=\"2\">x</td>\n<td>y</td>\n</tr>\n<tr>\n<td>z</td>\n</tr>\n</tbody>\n</table>\n",
+      "tables": [
+        {
+          "version": "1.0",
+          "rows": 3,
+          "cols": 2,
+          "header_rows": 1,
+          "align": [
+            null,
+            null
+          ],
+          "cells": [
+            {
+              "row": 0,
+              "col": 0,
+              "rowspan": 1,
+              "colspan": 1,
+              "text": "A"
+            },
+            {
+              "row": 0,
+              "col": 1,
+              "rowspan": 1,
+              "colspan": 1,
+              "text": "B"
+            },
+            {
+              "row": 1,
+              "col": 0,
+              "rowspan": 2,
+              "colspan": 1,
+              "text": "x"
+            },
+            {
+              "row": 1,
+              "col": 1,
+              "rowspan": 1,
+              "colspan": 1,
+              "text": "y"
+            },
+            {
+              "row": 2,
+              "col": 1,
+              "rowspan": 1,
+              "colspan": 1,
+              "text": "z"
+            }
+          ]
+        }
+      ],
+      "errors": [
+        {
+          "rule": "V3",
+          "row": 1,
+          "col": 0
+        }
+      ]
+    },
+    {
+      "example": 38,
+      "section": "5. Validation rules",
+      "ltem": "| A       | B       | C |\n|---------|---------|---|\n| x       | y {r:2} | z |\n| w {c:2} |         | v |\n",
+      "html": "<table>\n<thead>\n<tr>\n<th>A</th>\n<th>B</th>\n<th>C</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>x</td>\n<td rowspan=\"2\">y</td>\n<td>z</td>\n</tr>\n<tr>\n<td>w</td>\n<td>v</td>\n</tr>\n</tbody>\n</table>\n",
+      "tables": [
+        {
+          "version": "1.0",
+          "rows": 3,
+          "cols": 3,
+          "header_rows": 1,
+          "align": [
+            null,
+            null,
+            null
+          ],
+          "cells": [
+            {
+              "row": 0,
+              "col": 0,
+              "rowspan": 1,
+              "colspan": 1,
+              "text": "A"
+            },
+            {
+              "row": 0,
+              "col": 1,
+              "rowspan": 1,
+              "colspan": 1,
+              "text": "B"
+            },
+            {
+              "row": 0,
+              "col": 2,
+              "rowspan": 1,
+              "colspan": 1,
+              "text": "C"
+            },
+            {
+              "row": 1,
+              "col": 0,
+              "rowspan": 1,
+              "colspan": 1,
+              "text": "x"
+            },
+            {
+              "row": 1,
+              "col": 1,
+              "rowspan": 2,
+              "colspan": 1,
+              "text": "y"
+            },
+            {
+              "row": 1,
+              "col": 2,
+              "rowspan": 1,
+              "colspan": 1,
+              "text": "z"
+            },
+            {
+              "row": 2,
+              "col": 0,
+              "rowspan": 1,
+              "colspan": 1,
+              "text": "w"
+            },
+            {
+              "row": 2,
+              "col": 2,
+              "rowspan": 1,
+              "colspan": 1,
+              "text": "v"
+            }
+          ]
+        }
+      ],
+      "errors": [
+        {
+          "rule": "V4",
+          "row": 2,
+          "col": 0
+        }
+      ]
+    },
+    {
+      "example": 39,
+      "section": "5. Validation rules",
+      "ltem": "| A       | B |\n|---------|---|\n| x {r:2} | y |\n| oops    | z |\n",
+      "html": "<table>\n<thead>\n<tr>\n<th>A</th>\n<th>B</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td rowspan=\"2\">x</td>\n<td>y</td>\n</tr>\n<tr>\n<td>z</td>\n</tr>\n</tbody>\n</table>\n",
+      "tables": [
+        {
+          "version": "1.0",
+          "rows": 3,
+          "cols": 2,
+          "header_rows": 1,
+          "align": [
+            null,
+            null
+          ],
+          "cells": [
+            {
+              "row": 0,
+              "col": 0,
+              "rowspan": 1,
+              "colspan": 1,
+              "text": "A"
+            },
+            {
+              "row": 0,
+              "col": 1,
+              "rowspan": 1,
+              "colspan": 1,
+              "text": "B"
+            },
+            {
+              "row": 1,
+              "col": 0,
+              "rowspan": 2,
+              "colspan": 1,
+              "text": "x"
+            },
+            {
+              "row": 1,
+              "col": 1,
+              "rowspan": 1,
+              "colspan": 1,
+              "text": "y"
+            },
+            {
+              "row": 2,
+              "col": 1,
+              "rowspan": 1,
+              "colspan": 1,
+              "text": "z"
+            }
+          ]
+        }
+      ],
+      "errors": [
+        {
+          "rule": "V5",
+          "row": 2,
+          "col": 0
+        }
+      ]
+    },
+    {
+      "example": 40,
+      "section": "5. Validation rules",
+      "ltem": "| Region {r:2} | Q1  |\n|--------------|-----|\n| Asia         | 100 |\n",
+      "html": "<table>\n<thead>\n<tr>\n<th>Region</th>\n<th>Q1</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>Asia</td>\n<td>100</td>\n</tr>\n</tbody>\n</table>\n",
+      "tables": [
+        {
+          "version": "1.0",
+          "rows": 2,
+          "cols": 2,
+          "header_rows": 1,
+          "align": [
+            null,
+            null
+          ],
+          "cells": [
+            {
+              "row": 0,
+              "col": 0,
+              "rowspan": 1,
+              "colspan": 1,
+              "text": "Region"
+            },
+            {
+              "row": 0,
+              "col": 1,
+              "rowspan": 1,
+              "colspan": 1,
+              "text": "Q1"
+            },
+            {
+              "row": 1,
+              "col": 0,
+              "rowspan": 1,
+              "colspan": 1,
+              "text": "Asia"
+            },
+            {
+              "row": 1,
+              "col": 1,
+              "rowspan": 1,
+              "colspan": 1,
+              "text": "100"
+            }
+          ]
+        }
+      ],
+      "errors": [
+        {
+          "rule": "V7",
+          "row": 0,
+          "col": 0
+        }
+      ]
+    },
+    {
+      "example": 41,
+      "section": "5. Validation rules",
+      "ltem": "| Region {r:1} | Q1  |\n|--------------|-----|\n| ^^           | 100 |\n",
+      "html": "<table>\n<thead>\n<tr>\n<th>Region</th>\n<th>Q1</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>^^</td>\n<td>100</td>\n</tr>\n</tbody>\n</table>\n",
+      "tables": [
+        {
+          "version": "1.0",
+          "rows": 2,
+          "cols": 2,
+          "header_rows": 1,
+          "align": [
+            null,
+            null
+          ],
+          "cells": [
+            {
+              "row": 0,
+              "col": 0,
+              "rowspan": 1,
+              "colspan": 1,
+              "text": "Region"
+            },
+            {
+              "row": 0,
+              "col": 1,
+              "rowspan": 1,
+              "colspan": 1,
+              "text": "Q1"
+            },
+            {
+              "row": 1,
+              "col": 0,
+              "rowspan": 1,
+              "colspan": 1,
+              "text": "^^"
+            },
+            {
+              "row": 1,
+              "col": 1,
+              "rowspan": 1,
+              "colspan": 1,
+              "text": "100"
+            }
+          ]
+        }
+      ],
+      "errors": [
+        {
+          "rule": "V13",
+          "row": 1,
+          "col": 0
+        }
+      ]
+    },
+    {
+      "example": 42,
+      "section": "6. HTML output",
+      "ltem": "| Region | Revenue | <<   |\n|:-------|--------:|-----:|\n| Asia   | 100     | 120  |\n| Total  | 220     | <<   |\n",
+      "html": "<table>\n<thead>\n<tr>\n<th align=\"left\">Region</th>\n<th colspan=\"2\" align=\"right\">Revenue</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td align=\"left\">Asia</td>\n<td align=\"right\">100</td>\n<td align=\"right\">120</td>\n</tr>\n<tr>\n<td align=\"left\">Total</td>\n<td colspan=\"2\" align=\"right\">220</td>\n</tr>\n</tbody>\n</table>\n",
+      "tables": [
+        {
+          "version": "1.0",
+          "rows": 3,
+          "cols": 3,
+          "header_rows": 1,
+          "align": [
+            "left",
+            "right",
+            "right"
+          ],
+          "cells": [
+            {
+              "row": 0,
+              "col": 0,
+              "rowspan": 1,
+              "colspan": 1,
+              "text": "Region"
+            },
+            {
+              "row": 0,
+              "col": 1,
+              "rowspan": 1,
+              "colspan": 2,
+              "text": "Revenue"
+            },
+            {
+              "row": 1,
+              "col": 0,
+              "rowspan": 1,
+              "colspan": 1,
+              "text": "Asia"
+            },
+            {
+              "row": 1,
+              "col": 1,
+              "rowspan": 1,
+              "colspan": 1,
+              "text": "100"
+            },
+            {
+              "row": 1,
+              "col": 2,
+              "rowspan": 1,
+              "colspan": 1,
+              "text": "120"
+            },
+            {
+              "row": 2,
+              "col": 0,
+              "rowspan": 1,
+              "colspan": 1,
+              "text": "Total"
+            },
+            {
+              "row": 2,
+              "col": 1,
+              "rowspan": 1,
+              "colspan": 2,
+              "text": "220"
+            }
+          ]
+        }
+      ],
+      "errors": []
+    },
+    {
+      "example": 43,
+      "section": "9. Reserved syntax",
+      "ltem": "| # orders |\n| ID   | Customer |\n|------|----------|\n| 1001 | Alice    |\n",
+      "html": "<p>| # orders |</p>\n<table>\n<thead>\n<tr>\n<th>ID</th>\n<th>Customer</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>1001</td>\n<td>Alice</td>\n</tr>\n</tbody>\n</table>\n",
+      "tables": [
+        {
+          "version": "1.0",
+          "rows": 2,
+          "cols": 2,
+          "header_rows": 1,
+          "align": [
+            null,
+            null
+          ],
+          "cells": [
+            {
+              "row": 0,
+              "col": 0,
+              "rowspan": 1,
+              "colspan": 1,
+              "text": "ID"
+            },
+            {
+              "row": 0,
+              "col": 1,
+              "rowspan": 1,
+              "colspan": 1,
+              "text": "Customer"
+            },
+            {
+              "row": 1,
+              "col": 0,
+              "rowspan": 1,
+              "colspan": 1,
+              "text": "1001"
+            },
+            {
+              "row": 1,
+              "col": 1,
+              "rowspan": 1,
+              "colspan": 1,
+              "text": "Alice"
+            }
+          ]
+        }
+      ],
+      "errors": []
+    },
+    {
+      "example": 44,
+      "section": "9. Reserved syntax",
+      "ltem": "| # orders |\n|----------|\n| 1001     |\n",
+      "html": "<table>\n<thead>\n<tr>\n<th># orders</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>1001</td>\n</tr>\n</tbody>\n</table>\n",
+      "tables": [
+        {
+          "version": "1.0",
+          "rows": 2,
+          "cols": 1,
+          "header_rows": 1,
+          "align": [
+            null
+          ],
+          "cells": [
+            {
+              "row": 0,
+              "col": 0,
+              "rowspan": 1,
+              "colspan": 1,
+              "text": "# orders"
+            },
+            {
+              "row": 1,
+              "col": 0,
+              "rowspan": 1,
+              "colspan": 1,
+              "text": "1001"
+            }
+          ]
+        }
+      ],
+      "errors": []
+    },
+    {
+      "example": 45,
+      "section": "10. Section rows (informative)",
+      "ltem": "| Card    | Annual Fee | Rewards |\n|---------|------------|---------|\n| Travel cards | <<    | <<      |\n| Sapphire | $550      | 3x      |\n| Cash-back cards | << | <<      |\n| Freedom | $0         | 1.5%    |\n",
+      "html": "<table>\n<thead>\n<tr>\n<th>Card</th>\n<th>Annual Fee</th>\n<th>Rewards</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td colspan=\"3\">Travel cards</td>\n</tr>\n<tr>\n<td>Sapphire</td>\n<td>$550</td>\n<td>3x</td>\n</tr>\n<tr>\n<td colspan=\"3\">Cash-back cards</td>\n</tr>\n<tr>\n<td>Freedom</td>\n<td>$0</td>\n<td>1.5%</td>\n</tr>\n</tbody>\n</table>\n",
+      "tables": [
+        {
+          "version": "1.0",
+          "rows": 5,
+          "cols": 3,
+          "header_rows": 1,
+          "align": [
+            null,
+            null,
+            null
+          ],
+          "cells": [
+            {
+              "row": 0,
+              "col": 0,
+              "rowspan": 1,
+              "colspan": 1,
+              "text": "Card"
+            },
+            {
+              "row": 0,
+              "col": 1,
+              "rowspan": 1,
+              "colspan": 1,
+              "text": "Annual Fee"
+            },
+            {
+              "row": 0,
+              "col": 2,
+              "rowspan": 1,
+              "colspan": 1,
+              "text": "Rewards"
+            },
+            {
+              "row": 1,
+              "col": 0,
+              "rowspan": 1,
+              "colspan": 3,
+              "text": "Travel cards"
+            },
+            {
+              "row": 2,
+              "col": 0,
+              "rowspan": 1,
+              "colspan": 1,
+              "text": "Sapphire"
+            },
+            {
+              "row": 2,
+              "col": 1,
+              "rowspan": 1,
+              "colspan": 1,
+              "text": "$550"
+            },
+            {
+              "row": 2,
+              "col": 2,
+              "rowspan": 1,
+              "colspan": 1,
+              "text": "3x"
+            },
+            {
+              "row": 3,
+              "col": 0,
+              "rowspan": 1,
+              "colspan": 3,
+              "text": "Cash-back cards"
+            },
+            {
+              "row": 4,
+              "col": 0,
+              "rowspan": 1,
+              "colspan": 1,
+              "text": "Freedom"
+            },
+            {
+              "row": 4,
+              "col": 1,
+              "rowspan": 1,
+              "colspan": 1,
+              "text": "$0"
+            },
+            {
+              "row": 4,
+              "col": 2,
+              "rowspan": 1,
+              "colspan": 1,
+              "text": "1.5%"
+            }
+          ]
+        }
+      ],
+      "errors": []
+    },
+    {
+      "example": 46,
+      "section": "11. Tables without header rows (informative)",
+      "ltem": "|  |  |\n|--|--|\n| Plan A | Expand |\n| Plan B | Review |\n",
+      "html": "<table>\n<thead>\n<tr>\n<th></th>\n<th></th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>Plan A</td>\n<td>Expand</td>\n</tr>\n<tr>\n<td>Plan B</td>\n<td>Review</td>\n</tr>\n</tbody>\n</table>\n",
+      "tables": [
+        {
+          "version": "1.0",
+          "rows": 3,
+          "cols": 2,
+          "header_rows": 1,
+          "align": [
+            null,
+            null
+          ],
+          "cells": [
+            {
+              "row": 0,
+              "col": 0,
+              "rowspan": 1,
+              "colspan": 1,
+              "text": ""
+            },
+            {
+              "row": 0,
+              "col": 1,
+              "rowspan": 1,
+              "colspan": 1,
+              "text": ""
+            },
+            {
+              "row": 1,
+              "col": 0,
+              "rowspan": 1,
+              "colspan": 1,
+              "text": "Plan A"
+            },
+            {
+              "row": 1,
+              "col": 1,
+              "rowspan": 1,
+              "colspan": 1,
+              "text": "Expand"
+            },
+            {
+              "row": 2,
+              "col": 0,
+              "rowspan": 1,
+              "colspan": 1,
+              "text": "Plan B"
+            },
+            {
+              "row": 2,
+              "col": 1,
+              "rowspan": 1,
+              "colspan": 1,
+              "text": "Review"
+            }
+          ]
+        }
+      ],
+      "errors": []
+    }
+  ]
+}

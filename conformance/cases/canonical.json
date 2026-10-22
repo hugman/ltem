@@ -1,0 +1,755 @@
+{
+  "description": "Canonical form (specification Section 8). Each case gives a table model and the LTEM that a writer producing the canonical form writes for it. The expected text was derived by hand from the specification.",
+  "spec": "spec/ltem-spec.md",
+  "spec_version": "1.0",
+  "cases": [
+    {
+      "case": 1,
+      "name": "Columns and alignment",
+      "section": "Section 8: delimiter cells",
+      "table": {
+        "version": "1.0",
+        "rows": 2,
+        "cols": 4,
+        "header_rows": 1,
+        "align": [
+          null,
+          "left",
+          "center",
+          "right"
+        ],
+        "cells": [
+          {
+            "row": 0,
+            "col": 0,
+            "rowspan": 1,
+            "colspan": 1,
+            "text": "Item"
+          },
+          {
+            "row": 0,
+            "col": 1,
+            "rowspan": 1,
+            "colspan": 1,
+            "text": "A"
+          },
+          {
+            "row": 0,
+            "col": 2,
+            "rowspan": 1,
+            "colspan": 1,
+            "text": "B"
+          },
+          {
+            "row": 0,
+            "col": 3,
+            "rowspan": 1,
+            "colspan": 1,
+            "text": "C"
+          },
+          {
+            "row": 1,
+            "col": 0,
+            "rowspan": 1,
+            "colspan": 1,
+            "text": "x"
+          },
+          {
+            "row": 1,
+            "col": 1,
+            "rowspan": 1,
+            "colspan": 1,
+            "text": "1"
+          },
+          {
+            "row": 1,
+            "col": 2,
+            "rowspan": 1,
+            "colspan": 1,
+            "text": "2"
+          },
+          {
+            "row": 1,
+            "col": 3,
+            "rowspan": 1,
+            "colspan": 1,
+            "text": "3"
+          }
+        ]
+      },
+      "ltem": "| Item | A | B | C |\n| --- | :--- | :---: | ---: |\n| x | 1 | 2 | 3 |"
+    },
+    {
+      "case": 2,
+      "name": "Colspan and rowspan in header rows",
+      "section": "Section 8: markers",
+      "table": {
+        "version": "1.0",
+        "rows": 3,
+        "cols": 3,
+        "header_rows": 2,
+        "align": [
+          null,
+          null,
+          null
+        ],
+        "cells": [
+          {
+            "row": 0,
+            "col": 0,
+            "rowspan": 2,
+            "colspan": 1,
+            "text": "Region"
+          },
+          {
+            "row": 0,
+            "col": 1,
+            "rowspan": 1,
+            "colspan": 2,
+            "text": "Revenue"
+          },
+          {
+            "row": 1,
+            "col": 1,
+            "rowspan": 1,
+            "colspan": 1,
+            "text": "Q1"
+          },
+          {
+            "row": 1,
+            "col": 2,
+            "rowspan": 1,
+            "colspan": 1,
+            "text": "Q2"
+          },
+          {
+            "row": 2,
+            "col": 0,
+            "rowspan": 1,
+            "colspan": 1,
+            "text": "Asia"
+          },
+          {
+            "row": 2,
+            "col": 1,
+            "rowspan": 1,
+            "colspan": 1,
+            "text": "100"
+          },
+          {
+            "row": 2,
+            "col": 2,
+            "rowspan": 1,
+            "colspan": 1,
+            "text": "120"
+          }
+        ]
+      },
+      "ltem": "| Region | Revenue | << |\n| ^^ | Q1 | Q2 |\n| --- | --- | --- |\n| Asia | 100 | 120 |"
+    },
+    {
+      "case": 3,
+      "name": "A block of merged cells",
+      "section": "Section 8: ^^ in the origin's column, << elsewhere",
+      "table": {
+        "version": "1.0",
+        "rows": 3,
+        "cols": 3,
+        "header_rows": 2,
+        "align": [
+          null,
+          null,
+          null
+        ],
+        "cells": [
+          {
+            "row": 0,
+            "col": 0,
+            "rowspan": 2,
+            "colspan": 2,
+            "text": "Summary"
+          },
+          {
+            "row": 0,
+            "col": 2,
+            "rowspan": 1,
+            "colspan": 1,
+            "text": "Note"
+          },
+          {
+            "row": 1,
+            "col": 2,
+            "rowspan": 1,
+            "colspan": 1,
+            "text": "Q4"
+          },
+          {
+            "row": 2,
+            "col": 0,
+            "rowspan": 1,
+            "colspan": 1,
+            "text": "1"
+          },
+          {
+            "row": 2,
+            "col": 1,
+            "rowspan": 1,
+            "colspan": 1,
+            "text": "2"
+          },
+          {
+            "row": 2,
+            "col": 2,
+            "rowspan": 1,
+            "colspan": 1,
+            "text": "3"
+          }
+        ]
+      },
+      "ltem": "| Summary | << | Note |\n| ^^ | << | Q4 |\n| --- | --- | --- |\n| 1 | 2 | 3 |"
+    },
+    {
+      "case": 4,
+      "name": "Spans in body rows",
+      "section": "Section 8: every covered position in the origin's column is ^^",
+      "table": {
+        "version": "1.0",
+        "rows": 4,
+        "cols": 3,
+        "header_rows": 1,
+        "align": [
+          null,
+          null,
+          null
+        ],
+        "cells": [
+          {
+            "row": 0,
+            "col": 0,
+            "rowspan": 1,
+            "colspan": 1,
+            "text": "A"
+          },
+          {
+            "row": 0,
+            "col": 1,
+            "rowspan": 1,
+            "colspan": 1,
+            "text": "B"
+          },
+          {
+            "row": 0,
+            "col": 2,
+            "rowspan": 1,
+            "colspan": 1,
+            "text": "C"
+          },
+          {
+            "row": 1,
+            "col": 0,
+            "rowspan": 3,
+            "colspan": 1,
+            "text": "x"
+          },
+          {
+            "row": 1,
+            "col": 1,
+            "rowspan": 2,
+            "colspan": 2,
+            "text": "y"
+          },
+          {
+            "row": 3,
+            "col": 1,
+            "rowspan": 1,
+            "colspan": 1,
+            "text": "z"
+          },
+          {
+            "row": 3,
+            "col": 2,
+            "rowspan": 1,
+            "colspan": 1,
+            "text": "w"
+          }
+        ]
+      },
+      "ltem": "| A | B | C |\n| --- | --- | --- |\n| x | y | << |\n| ^^ | ^^ | << |\n| ^^ | z | w |"
+    },
+    {
+      "case": 5,
+      "name": "A section row",
+      "section": "Section 10",
+      "table": {
+        "version": "1.0",
+        "rows": 3,
+        "cols": 3,
+        "header_rows": 1,
+        "align": [
+          null,
+          null,
+          null
+        ],
+        "cells": [
+          {
+            "row": 0,
+            "col": 0,
+            "rowspan": 1,
+            "colspan": 1,
+            "text": "Card"
+          },
+          {
+            "row": 0,
+            "col": 1,
+            "rowspan": 1,
+            "colspan": 1,
+            "text": "Fee"
+          },
+          {
+            "row": 0,
+            "col": 2,
+            "rowspan": 1,
+            "colspan": 1,
+            "text": "Rewards"
+          },
+          {
+            "row": 1,
+            "col": 0,
+            "rowspan": 1,
+            "colspan": 3,
+            "text": "Travel cards"
+          },
+          {
+            "row": 2,
+            "col": 0,
+            "rowspan": 1,
+            "colspan": 1,
+            "text": "Sapphire"
+          },
+          {
+            "row": 2,
+            "col": 1,
+            "rowspan": 1,
+            "colspan": 1,
+            "text": "$550"
+          },
+          {
+            "row": 2,
+            "col": 2,
+            "rowspan": 1,
+            "colspan": 1,
+            "text": "3x"
+          }
+        ]
+      },
+      "ltem": "| Card | Fee | Rewards |\n| --- | --- | --- |\n| Travel cards | << | << |\n| Sapphire | $550 | 3x |"
+    },
+    {
+      "case": 6,
+      "name": "Empty cells",
+      "section": "Section 8: an empty cell has a space between its pipes",
+      "table": {
+        "version": "1.0",
+        "rows": 2,
+        "cols": 3,
+        "header_rows": 1,
+        "align": [
+          null,
+          null,
+          null
+        ],
+        "cells": [
+          {
+            "row": 0,
+            "col": 0,
+            "rowspan": 1,
+            "colspan": 1,
+            "text": ""
+          },
+          {
+            "row": 0,
+            "col": 1,
+            "rowspan": 1,
+            "colspan": 1,
+            "text": ""
+          },
+          {
+            "row": 0,
+            "col": 2,
+            "rowspan": 1,
+            "colspan": 1,
+            "text": ""
+          },
+          {
+            "row": 1,
+            "col": 0,
+            "rowspan": 1,
+            "colspan": 1,
+            "text": "a"
+          },
+          {
+            "row": 1,
+            "col": 1,
+            "rowspan": 1,
+            "colspan": 1,
+            "text": ""
+          },
+          {
+            "row": 1,
+            "col": 2,
+            "rowspan": 1,
+            "colspan": 1,
+            "text": "c"
+          }
+        ]
+      },
+      "ltem": "|  |  |  |\n| --- | --- | --- |\n| a |  | c |"
+    },
+    {
+      "case": 7,
+      "name": "A table without a header",
+      "section": "Section 11",
+      "table": {
+        "version": "1.0",
+        "rows": 3,
+        "cols": 2,
+        "header_rows": 1,
+        "align": [
+          null,
+          null
+        ],
+        "cells": [
+          {
+            "row": 0,
+            "col": 0,
+            "rowspan": 1,
+            "colspan": 1,
+            "text": ""
+          },
+          {
+            "row": 0,
+            "col": 1,
+            "rowspan": 1,
+            "colspan": 1,
+            "text": ""
+          },
+          {
+            "row": 1,
+            "col": 0,
+            "rowspan": 1,
+            "colspan": 1,
+            "text": "Plan A"
+          },
+          {
+            "row": 1,
+            "col": 1,
+            "rowspan": 1,
+            "colspan": 1,
+            "text": "Expand"
+          },
+          {
+            "row": 2,
+            "col": 0,
+            "rowspan": 1,
+            "colspan": 1,
+            "text": "Plan B"
+          },
+          {
+            "row": 2,
+            "col": 1,
+            "rowspan": 1,
+            "colspan": 1,
+            "text": "Review"
+          }
+        ]
+      },
+      "ltem": "|  |  |\n| --- | --- |\n| Plan A | Expand |\n| Plan B | Review |"
+    },
+    {
+      "case": 8,
+      "name": "Text that looks like notation",
+      "section": "Sections 4.2 and 4.3: escapes per line",
+      "table": {
+        "version": "1.0",
+        "rows": 3,
+        "cols": 4,
+        "header_rows": 1,
+        "align": [
+          null,
+          null,
+          null,
+          null
+        ],
+        "cells": [
+          {
+            "row": 0,
+            "col": 0,
+            "rowspan": 1,
+            "colspan": 1,
+            "text": "Op"
+          },
+          {
+            "row": 0,
+            "col": 1,
+            "rowspan": 1,
+            "colspan": 1,
+            "text": "Example"
+          },
+          {
+            "row": 0,
+            "col": 2,
+            "rowspan": 1,
+            "colspan": 1,
+            "text": "Pipe"
+          },
+          {
+            "row": 0,
+            "col": 3,
+            "rowspan": 1,
+            "colspan": 1,
+            "text": "Lines"
+          },
+          {
+            "row": 1,
+            "col": 0,
+            "rowspan": 1,
+            "colspan": 1,
+            "text": "<<"
+          },
+          {
+            "row": 1,
+            "col": 1,
+            "rowspan": 1,
+            "colspan": 1,
+            "text": "x {c:2}"
+          },
+          {
+            "row": 1,
+            "col": 2,
+            "rowspan": 1,
+            "colspan": 1,
+            "text": "a | b"
+          },
+          {
+            "row": 1,
+            "col": 3,
+            "rowspan": 1,
+            "colspan": 1,
+            "text": "one\ntwo"
+          },
+          {
+            "row": 2,
+            "col": 0,
+            "rowspan": 1,
+            "colspan": 1,
+            "text": "^^"
+          },
+          {
+            "row": 2,
+            "col": 1,
+            "rowspan": 1,
+            "colspan": 1,
+            "text": "a << b"
+          },
+          {
+            "row": 2,
+            "col": 2,
+            "rowspan": 1,
+            "colspan": 1,
+            "text": "x{c:2}"
+          },
+          {
+            "row": 2,
+            "col": 3,
+            "rowspan": 1,
+            "colspan": 1,
+            "text": "<<\n^^"
+          }
+        ]
+      },
+      "ltem": "| Op | Example | Pipe | Lines |\n| --- | --- | --- | --- |\n| \\<< | x \\{c:2} | a \\| b | one \\\\ two |\n| \\^^ | a << b | x{c:2} | \\<< \\\\ \\^^ |"
+    },
+    {
+      "case": 9,
+      "name": "A header row of hyphens",
+      "section": "Section 4.3: the first cell is escaped",
+      "table": {
+        "version": "1.0",
+        "rows": 3,
+        "cols": 2,
+        "header_rows": 2,
+        "align": [
+          null,
+          null
+        ],
+        "cells": [
+          {
+            "row": 0,
+            "col": 0,
+            "rowspan": 1,
+            "colspan": 1,
+            "text": "-"
+          },
+          {
+            "row": 0,
+            "col": 1,
+            "rowspan": 1,
+            "colspan": 1,
+            "text": ":-:"
+          },
+          {
+            "row": 1,
+            "col": 0,
+            "rowspan": 1,
+            "colspan": 1,
+            "text": "a"
+          },
+          {
+            "row": 1,
+            "col": 1,
+            "rowspan": 1,
+            "colspan": 1,
+            "text": "b"
+          },
+          {
+            "row": 2,
+            "col": 0,
+            "rowspan": 1,
+            "colspan": 1,
+            "text": "1"
+          },
+          {
+            "row": 2,
+            "col": 1,
+            "rowspan": 1,
+            "colspan": 1,
+            "text": "2"
+          }
+        ]
+      },
+      "ltem": "| \\- | :-: |\n| a | b |\n| --- | --- |\n| 1 | 2 |"
+    },
+    {
+      "case": 10,
+      "name": "Header rows in the form of an identifier line",
+      "section": "Sections 4.3 and 9: only rows above the last header row are escaped",
+      "table": {
+        "version": "1.0",
+        "rows": 4,
+        "cols": 1,
+        "header_rows": 3,
+        "align": [
+          null
+        ],
+        "cells": [
+          {
+            "row": 0,
+            "col": 0,
+            "rowspan": 1,
+            "colspan": 1,
+            "text": "a"
+          },
+          {
+            "row": 1,
+            "col": 0,
+            "rowspan": 1,
+            "colspan": 1,
+            "text": "# x"
+          },
+          {
+            "row": 2,
+            "col": 0,
+            "rowspan": 1,
+            "colspan": 1,
+            "text": "# y"
+          },
+          {
+            "row": 3,
+            "col": 0,
+            "rowspan": 1,
+            "colspan": 1,
+            "text": "1"
+          }
+        ]
+      },
+      "ltem": "| a |\n| \\# x |\n| # y |\n| --- |\n| 1 |"
+    },
+    {
+      "case": 11,
+      "name": "A single header row in the form of an identifier line",
+      "section": "Section 9: the last header row needs no escape",
+      "table": {
+        "version": "1.0",
+        "rows": 2,
+        "cols": 1,
+        "header_rows": 1,
+        "align": [
+          null
+        ],
+        "cells": [
+          {
+            "row": 0,
+            "col": 0,
+            "rowspan": 1,
+            "colspan": 1,
+            "text": "# orders"
+          },
+          {
+            "row": 1,
+            "col": 0,
+            "rowspan": 1,
+            "colspan": 1,
+            "text": "1001"
+          }
+        ]
+      },
+      "ltem": "| # orders |\n| --- |\n| 1001 |"
+    },
+    {
+      "case": 12,
+      "name": "Inline Markdown and other spaces are kept",
+      "section": "Sections 2.1 and 4.1",
+      "table": {
+        "version": "1.0",
+        "rows": 2,
+        "cols": 2,
+        "header_rows": 1,
+        "align": [
+          null,
+          null
+        ],
+        "cells": [
+          {
+            "row": 0,
+            "col": 0,
+            "rowspan": 1,
+            "colspan": 1,
+            "text": "**Item**"
+          },
+          {
+            "row": 0,
+            "col": 1,
+            "rowspan": 1,
+            "colspan": 1,
+            "text": "Amount"
+          },
+          {
+            "row": 1,
+            "col": 0,
+            "rowspan": 1,
+            "colspan": 1,
+            "text": "　Subtotal"
+          },
+          {
+            "row": 1,
+            "col": 1,
+            "rowspan": 1,
+            "colspan": 1,
+            "text": "`60`"
+          }
+        ]
+      },
+      "ltem": "| **Item** | Amount |\n| --- | --- |\n| 　Subtotal | `60` |"
+    }
+  ]
+}

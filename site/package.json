@@ -1,0 +1,39 @@
+{
+  "name": "ltem-site",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "sync": "node scripts/sync-docs.mjs",
+    "dev": "node scripts/sync-docs.mjs && vitepress dev . --host 0.0.0.0 --port 5173",
+    "build": "node scripts/sync-docs.mjs && vitepress build .",
+    "preview": "vitepress preview . --host 0.0.0.0 --port 4173"
+  },
+  "dependencies": {
+    "@codemirror/lang-html": "^6.4.12",
+    "@codemirror/lang-markdown": "^6.5.2",
+    "@codemirror/language": "^6.13.1",
+    "@codemirror/lint": "^6.9.7",
+    "@codemirror/state": "^6.7.6",
+    "@codemirror/view": "^6.43.14",
+    "@fontsource/google-sans": "^5.3.2",
+    "@fontsource/noto-sans": "^5.3.0",
+    "@lezer/common": "^1.5.3",
+    "@lezer/highlight": "^1.2.5",
+    "@lezer/markdown": "^1.8.0",
+    "codemirror": "^6.0.2",
+    "codemirror-ltem": "file:../ltem-lib/typescript/packages/codemirror-ltem",
+    "codemirror-ltem-live": "file:../ltem-lib/typescript/packages/codemirror-ltem-live",
+    "github-slugger": "^2.0.0",
+    "ltem-core": "file:../ltem-lib/typescript/packages/ltem",
+    "markdown-it": "^14.1.0",
+    "markdown-it-footnote": "^4.0.0",
+    "markdown-it-ltem": "file:../ltem-lib/typescript/packages/markdown-it-ltem",
+    "markdown-it-mark": "^4.0.0"
+  },
+  "devDependencies": {
+    "vitepress": "^1.6.4"
+  },
+  "overrides": {
+    "ltem-core": "$ltem-core"
+  }
+}

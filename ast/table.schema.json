@@ -1,0 +1,77 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/hugman/ltem/blob/main/ast/table.schema.json",
+  "title": "LTEM table model",
+  "description": "A parsed LTEM table, as defined by the LTEM specification version 1.0. See table-model.md for field meanings and the rules that JSON Schema cannot express.",
+  "type": "object",
+  "required": ["version", "rows", "cols", "header_rows", "align", "cells"],
+  "additionalProperties": false,
+  "properties": {
+    "version": {
+      "description": "Version of the table model.",
+      "const": "1.0"
+    },
+    "rows": {
+      "description": "Number of grid rows: header rows followed by body rows.",
+      "type": "integer",
+      "minimum": 1
+    },
+    "cols": {
+      "description": "Number of grid columns, equal to the number of cells in the delimiter row.",
+      "type": "integer",
+      "minimum": 1
+    },
+    "header_rows": {
+      "description": "Number of header rows. Rows 0 to header_rows - 1 are header rows.",
+      "type": "integer",
+      "minimum": 1
+    },
+    "align": {
+      "description": "Alignment of each column, from the delimiter row. Its length equals cols.",
+      "type": "array",
+      "items": {
+        "enum": ["left", "center", "right", null]
+      }
+    },
+    "cells": {
+      "description": "One entry per cell, sorted by row and then by column. Together the cells cover every grid position exactly once.",
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/cell"
+      }
+    }
+  },
+  "$defs": {
+    "cell": {
+      "type": "object",
+      "required": ["row", "col", "rowspan", "colspan", "text"],
+      "additionalProperties": false,
+      "properties": {
+        "row": {
+          "description": "Row of the cell's origin (top-left position), counting from 0.",
+          "type": "integer",
+          "minimum": 0
+        },
+        "col": {
+          "description": "Column of the cell's origin, counting from 0.",
+          "type": "integer",
+          "minimum": 0
+        },
+        "rowspan": {
+          "description": "Number of rows the cell spans.",
+          "type": "integer",
+          "minimum": 1
+        },
+        "colspan": {
+          "description": "Number of columns the cell spans.",
+          "type": "integer",
+          "minimum": 1
+        },
+        "text": {
+          "description": "Inline Markdown source of the cell. Lines are separated by a line feed (U+000A).",
+          "type": "string"
+        }
+      }
+    }
+  }
+}

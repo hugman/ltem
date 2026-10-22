@@ -1,0 +1,22 @@
+[package]
+name = "ltem"
+description = "LTEM (LLM-friendly Table-Enhanced Markdown): Markdown pipe tables with merged cells and multi-row headers"
+version.workspace = true
+edition.workspace = true
+repository.workspace = true
+license.workspace = true
+readme = "README.md"
+keywords = ["markdown", "table", "gfm", "colspan", "rowspan"]
+categories = ["parser-implementations", "text-processing"]
+# Not published to crates.io before the repository is public.
+publish = false
+
+[features]
+default = []
+# CommonMark inline rendering of cell text with pulldown-cmark (`commonmark_inline`).
+commonmark-inline = ["dep:pulldown-cmark"]
+
+[dependencies]
+serde = { version = "1.0.200", features = ["derive"] }
+serde_json = "1.0.100"
+pulldown-cmark = { version = "0.13", default-features = false, features = ["html"], optional = true }

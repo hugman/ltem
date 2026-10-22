@@ -1,0 +1,74 @@
+{
+  "name": "codemirror-ltem-live",
+  "version": "0.1.10",
+  "description": "Live Preview for Markdown in CodeMirror 6, with LTEM tables: marks shown only where the cursor is, tables shown and edited as tables",
+  "license": "MIT",
+  "keywords": [
+    "codemirror",
+    "codemirror6",
+    "markdown",
+    "live-preview",
+    "wysiwyg",
+    "table",
+    "ltem"
+  ],
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    },
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "sideEffects": false,
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "test": "tsc -p tsconfig.test.json && node --test \"test/**/*.test.ts\"",
+    "clean": "node -e \"require('fs').rmSync('dist', { recursive: true, force: true })\"",
+    "bundle:test": "esbuild test-browser/page.ts --bundle --format=iife --outfile=test-browser/dist/page.js --log-level=warning && node -e \"for (const f of ['page.html','page-shadow.html','page.css']) require('fs').copyFileSync('test-browser/'+f,'test-browser/dist/'+f)\"",
+    "test:browser": "npm run bundle:test && node --test \"test-browser/**/*.test.ts\"",
+    "bench": "npm run bundle:test && node test-browser/perf.ts"
+  },
+  "dependencies": {
+    "codemirror-ltem": "0.2.11",
+    "linkify-it": "^6.0.0",
+    "ltem-core": "0.1.0"
+  },
+  "peerDependencies": {
+    "@codemirror/lang-html": "^6.4.0",
+    "@codemirror/lang-markdown": "^6.3.0",
+    "@codemirror/language": "^6.10.0",
+    "@codemirror/state": "^6.4.0",
+    "@codemirror/view": "^6.30.0",
+    "@lezer/common": "^1.2.0",
+    "@lezer/highlight": "^1.2.0",
+    "@lezer/markdown": "^1.3.0"
+  },
+  "devDependencies": {
+    "@codemirror/lang-html": "^6.4.12",
+    "@codemirror/lang-javascript": "^6.2.5",
+    "@codemirror/lang-markdown": "^6.5.2",
+    "@codemirror/language": "^6.13.1",
+    "@codemirror/state": "^6.7.6",
+    "@codemirror/view": "^6.43.14",
+    "@lezer/common": "^1.2.3",
+    "@lezer/highlight": "^1.2.1",
+    "@lezer/markdown": "^1.8.0",
+    "codemirror": "^6.0.2",
+    "esbuild": "^0.28.2",
+    "markdown-it": "^15.0.2",
+    "markdown-it-footnote": "^4.0.0",
+    "markdown-it-ltem": "0.1.0",
+    "markdown-it-mark": "^4.0.0",
+    "playwright": "^1.64.1"
+  }
+}

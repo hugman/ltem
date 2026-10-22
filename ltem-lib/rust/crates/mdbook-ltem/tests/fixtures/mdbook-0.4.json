@@ -1,0 +1,60 @@
+[
+ {
+  "root": "/book",
+  "config": {
+   "book": {
+    "authors": [],
+    "language": "en",
+    "multilingual": false,
+    "src": "src",
+    "title": "Fixture"
+   },
+   "output": {
+    "html": {
+     "curly-quotes": true
+    }
+   },
+   "preprocessor": {
+    "ltem": {}
+   }
+  },
+  "renderer": "html",
+  "mdbook_version": "0.4.40"
+ },
+ {
+  "sections": [
+   {
+    "Chapter": {
+     "name": "Intro",
+     "content": "# Intro\n\n| \"Region\" {c:2} |\n|---|---|\n| 1 | 2 |\n",
+     "number": [
+      1
+     ],
+     "sub_items": [
+      {
+       "Chapter": {
+        "name": "Sub",
+        "content": "- | a | << |\n  |---|---|\n",
+        "number": [
+         1,
+         1
+        ],
+        "sub_items": [],
+        "path": "sub.md",
+        "source_path": "sub.md",
+        "parent_names": [
+         "Intro"
+        ]
+       }
+      }
+     ],
+     "path": "intro.md",
+     "source_path": "intro.md",
+     "parent_names": []
+    }
+   },
+   "Separator"
+  ],
+  "__non_exhaustive": null
+ }
+]

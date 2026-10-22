@@ -1,0 +1,80 @@
+LTEM Patent License
+
+1. Purpose
+
+If EurekaAI Co., Ltd. ("EurekaAI") obtains patents with claims essential to
+the LTEM Specification, it licenses those claims royalty-free to
+implementations that conform to the Specification, so that such
+implementations cannot be blocked by them.
+
+2. Definitions
+
+"Specification" means the LTEM Specification that EurekaAI publishes at
+https://github.com/hugman/ltem, in any version that EurekaAI publishes as an
+official version. Specifications derived from it by others are not included.
+
+"Conforming Implementation" means any software, hardware or service, or any
+part of one, that processes tables in the notation described by the
+Specification and that, for each kind of software it is (renderer, parser,
+validator or writer, as described in the Specification and its official
+conformance tests), passes the official conformance tests of the version of
+the Specification it implements.
+
+"Essential Claims" means the claims of the patents and patent applications,
+in any country, that EurekaAI or its affiliates own or control now or in the
+future, that would necessarily be infringed by implementing the normative
+parts of the Specification, because there is no technically feasible way to
+implement those parts without infringing them. Essential Claims do not
+include claims that cover:
+
+  (a) technologies that may be needed to make or use a product but are not
+      themselves set forth in the Specification, such as operating systems,
+      programming languages, Markdown parsing outside tables, or user
+      interfaces; or
+
+  (b) features that the Specification does not require, such as recognizing
+      tables in images or documents, converting tables from other formats,
+      editing tables, or particular techniques for speed or memory use.
+
+"You" means any person or legal entity exercising rights under this license,
+and its affiliates.
+
+3. Grant
+
+EurekaAI grants you a worldwide, royalty-free, no-charge, non-exclusive,
+irrevocable (except as stated in Section 5) license under the Essential
+Claims to make, have made, use, sell, offer for sale, import, distribute and
+otherwise dispose of Conforming Implementations, to the extent that they
+implement the normative parts of the Specification.
+
+This license needs no registration, notice or signature.
+
+4. Scope
+
+The license in Section 3 covers only the Essential Claims, and only
+Conforming Implementations. It does not cover implementations of notations
+that change the LTEM syntax or its meaning, nor any part of a product beyond
+what the Specification requires. The use of the name "LTEM" is governed
+separately by TRADEMARK.md.
+
+5. Termination
+
+If you, or anyone acting on your behalf, start or join a patent claim
+(including a cross-claim or counterclaim in a lawsuit) against any person or
+entity alleging that LTEM, the Specification or any implementation of it
+infringes a patent, the license granted to you in Section 3 ends on the date
+that claim is filed.
+
+6. No other rights
+
+This license grants no rights under any trademark, including the name
+"LTEM", and no copyright license; copyright licenses are in LICENSE and
+spec/LICENSE. Except as stated in this document, EurekaAI grants no rights,
+by implication, estoppel or otherwise.
+
+THE ESSENTIAL CLAIMS ARE LICENSED "AS IS", WITHOUT WARRANTY OF ANY KIND,
+INCLUDING ANY WARRANTY OF VALIDITY OR NON-INFRINGEMENT OF THIRD-PARTY RIGHTS.
+
+7. Patents and patent applications known at the date of this license
+
+(to be listed after filing)

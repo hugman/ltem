@@ -1,0 +1,20 @@
+[workspace]
+resolver = "2"
+members = [
+    "crates/ltem",
+    "crates/ltem-cli",
+    "crates/pulldown-cmark-ltem",
+    "crates/mdbook-ltem",
+    "crates/comrak-ltem",
+]
+
+[workspace.package]
+version = "0.1.0"
+license = "MIT"
+edition = "2021"
+repository = "https://github.com/hugman/ltem"
+
+[profile.release]
+lto = true
+codegen-units = 1
+strip = true

@@ -1,0 +1,56 @@
+{
+  "name": "mdast-util-ltem",
+  "version": "0.1.0",
+  "description": "mdast utility for LTEM tables: from markdown, to markdown and to hast, with merged cells and multi-row headers",
+  "license": "MIT",
+  "keywords": [
+    "mdast",
+    "mdast-util",
+    "markdown",
+    "unified",
+    "table",
+    "colspan",
+    "rowspan",
+    "ltem"
+  ],
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    },
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "sideEffects": false,
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "test": "tsc -p tsconfig.test.json && node --test \"test/**/*.test.ts\"",
+    "clean": "node -e \"require('fs').rmSync('dist', { recursive: true, force: true })\""
+  },
+  "dependencies": {
+    "@types/hast": "^3.0.0",
+    "@types/mdast": "^4.0.0",
+    "ltem-core": "0.1.0",
+    "mdast-util-from-markdown": "^2.0.0",
+    "mdast-util-to-hast": "^13.0.0",
+    "mdast-util-to-markdown": "^2.0.0"
+  },
+  "devDependencies": {
+    "hast-util-to-html": "^9.0.5",
+    "mdast-util-gfm": "^3.1.0",
+    "mdast-util-math": "^3.0.0",
+    "micromark": "^4.0.2",
+    "micromark-extension-gfm": "^3.0.0",
+    "micromark-extension-ltem": "0.1.0",
+    "micromark-extension-math": "^3.1.0"
+  }
+}

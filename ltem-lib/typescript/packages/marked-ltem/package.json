@@ -1,0 +1,48 @@
+{
+  "name": "marked-ltem",
+  "version": "0.1.0",
+  "description": "marked extension for LTEM tables: merged cells (colspan, rowspan) and multi-row headers",
+  "license": "MIT",
+  "keywords": [
+    "marked",
+    "marked-extension",
+    "markdown",
+    "table",
+    "colspan",
+    "rowspan",
+    "ltem"
+  ],
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    },
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "sideEffects": false,
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "test": "tsc -p tsconfig.test.json && node --test \"test/**/*.test.ts\"",
+    "clean": "node -e \"require('fs').rmSync('dist', { recursive: true, force: true })\""
+  },
+  "dependencies": {
+    "ltem-core": "0.1.0"
+  },
+  "peerDependencies": {
+    "marked": "^17 || ^18"
+  },
+  "devDependencies": {
+    "marked": "^18.1.1",
+    "marked-17": "npm:marked@^17.0.6"
+  }
+}

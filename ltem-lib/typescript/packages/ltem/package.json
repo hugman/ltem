@@ -1,0 +1,52 @@
+{
+  "name": "ltem-core",
+  "version": "0.1.0",
+  "description": "LTEM (LLM-friendly Table-Enhanced Markdown): Markdown tables with merged cells and multi-row headers",
+  "license": "MIT",
+  "keywords": [
+    "markdown",
+    "table",
+    "colspan",
+    "rowspan",
+    "llm",
+    "ltem"
+  ],
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    },
+    "./package.json": "./package.json"
+  },
+  "bin": {
+    "ltem": "./dist/cli.js"
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "THIRD-PARTY-NOTICES"
+  ],
+  "sideEffects": false,
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "test": "tsc -p tsconfig.test.json && node --test \"test/**/*.test.ts\"",
+    "clean": "node -e \"require('fs').rmSync('dist', { recursive: true, force: true })\""
+  },
+  "peerDependencies": {
+    "markdown-it": "^14 || ^15"
+  },
+  "peerDependenciesMeta": {
+    "markdown-it": {
+      "optional": true
+    }
+  },
+  "devDependencies": {
+    "markdown-it": "^15.0.2"
+  }
+}

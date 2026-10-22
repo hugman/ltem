@@ -1,0 +1,58 @@
+# Builds the site (site/) and publishes it to GitHub Pages: https://hugman.github.io/ltem/
+# The site uses the TypeScript packages of this repository (ltem-lib/typescript),
+# so they are built first.
+name: Pages
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-node@v7
+        with:
+          node-version: 24
+          cache: npm
+          cache-dependency-path: |
+            ltem-lib/typescript/package-lock.json
+            site/package-lock.json
+      # ltem-core first: the other packages import it, and npm builds the
+      # workspaces in folder order (codemirror-ltem comes before ltem).
+      - name: Build the TypeScript packages
+        working-directory: ltem-lib/typescript
+        run: |
+          npm ci
+          npm run build -w ltem-core
+          npm run build
+      - name: Build the site
+        working-directory: site
+        run: |
+          npm ci
+          npm run build
+      - uses: actions/configure-pages@v6
+      - uses: actions/upload-pages-artifact@v5
+        with:
+          path: site/.vitepress/dist
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v5

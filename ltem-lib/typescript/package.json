@@ -1,0 +1,19 @@
+{
+  "name": "ltem-typescript",
+  "private": true,
+  "description": "TypeScript workspace for LTEM: the core library and Markdown parser plugins",
+  "type": "module",
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "build": "npm run build --workspaces",
+    "test": "npm run build && npm test --workspaces",
+    "clean": "npm run clean --workspaces",
+    "pack": "npm run build && npm pack --workspaces --pack-destination dist-pack"
+  },
+  "devDependencies": {
+    "@types/node": "^24.0.0",
+    "typescript": "^7.0.2"
+  }
+}

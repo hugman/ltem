@@ -1,0 +1,6 @@
+# uv workspace for the Python packages of LTEM. Not a package itself.
+[tool.uv.workspace]
+members = ["ltem", "mdit-py-ltem", "markdown-ltem"]
+
+[dependency-groups]
+dev = ["pytest>=8", "jsonschema>=4", "markdown-it-py>=3", "markdown>=3.6"]

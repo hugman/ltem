@@ -1,0 +1,85 @@
+[
+ {
+  "root": "/book",
+  "config": {
+   "book": {
+    "title": "Fixture",
+    "authors": [],
+    "description": null,
+    "language": "en",
+    "text-direction": null
+   },
+   "preprocessor": {
+    "ltem": {
+     "after": [
+      "links"
+     ]
+    }
+   }
+  },
+  "renderer": "html",
+  "mdbook_version": "0.5.4"
+ },
+ {
+  "items": [
+   {
+    "Chapter": {
+     "name": "Intro",
+     "content": "# Intro\n\n| Region | Revenue | <<  |\n| ^^     | Q1      | Q2  |\n|--------|---------|-----|\n| Asia   | 100     | 120 |\n",
+     "number": null,
+     "sub_items": [],
+     "path": "intro.md",
+     "source_path": "intro.md",
+     "parent_names": []
+    }
+   },
+   {
+    "Chapter": {
+     "name": "Chapter",
+     "content": "# Chapter\n\n| a | b |\n|---|---|\n| 1 | 2 |\n",
+     "number": [
+      1
+     ],
+     "sub_items": [
+      {
+       "Chapter": {
+        "name": "Sub",
+        "content": "# Sub\n\n> | x {c:2} |\n> |---|---|\n> | 1 | 2 |\n",
+        "number": [
+         1,
+         1
+        ],
+        "sub_items": [],
+        "path": "sub/sub.md",
+        "source_path": "sub/sub.md",
+        "parent_names": [
+         "Chapter"
+        ]
+       }
+      }
+     ],
+     "path": "chapter.md",
+     "source_path": "chapter.md",
+     "parent_names": []
+    }
+   },
+   "Separator",
+   {
+    "PartTitle": "Part"
+   },
+   {
+    "Chapter": {
+     "name": "Draft",
+     "content": "",
+     "number": [
+      2
+     ],
+     "sub_items": [],
+     "path": null,
+     "source_path": null,
+     "parent_names": []
+    }
+   }
+  ]
+ }
+]
