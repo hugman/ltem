@@ -1,8 +1,8 @@
 # ltem (TypeScript)
 
-TypeScript implementation of [LTEM](../../../../README.md): Markdown pipe tables with merged cells and multi-row headers. It follows the LTEM specification, version 1.0, and passes the [conformance cases](../../../../conformance/).
+TypeScript implementation of [LTEM](https://hugman.github.io/ltem/): Markdown pipe tables with merged cells and multi-row headers. It follows the LTEM specification, version 1.0, and passes the [conformance cases](https://github.com/hugman/ltem/tree/main/conformance).
 
-Status: version 0.1.0, the first release, for LTEM 1.0. Not yet published to npm. The API may change before version 1.0.0.
+Status: version 0.1.1, for LTEM 1.0. The API may change before version 1.0.0.
 
 ## Install
 
@@ -31,7 +31,7 @@ write(table);                  // canonical LTEM
 result.problems;               // validation problems, if any
 ```
 
-`findTables(markdown)` finds every LTEM table in a Markdown document and returns one result per table, with the line range it came from. It is a light scan that skips code blocks. It is not a full Markdown parser; to render whole documents, use a parser plugin such as [`markdown-it-ltem`](../markdown-it-ltem/).
+`findTables(markdown)` finds every LTEM table in a Markdown document and returns one result per table, with the line range it came from. It is a light scan that skips code blocks. It is not a full Markdown parser; to render whole documents, use a parser plugin such as [`markdown-it-ltem`](https://www.npmjs.com/package/markdown-it-ltem).
 
 ### Where cells are
 
@@ -97,8 +97,8 @@ The package includes two generated tables (`tools/gen-tables.py` in the reposito
 - the HTML named character references, from the [HTML Standard](https://html.spec.whatwg.org/multipage/named-characters.html), (c) WHATWG (Apple, Google, Mozilla, Microsoft), licensed under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/);
 - Unicode character classes (letters, digits, printable characters) as Python defines them, from the Unicode Character Database 15.0, under the [Unicode License v3](https://www.unicode.org/license.txt).
 
-Their notices are in [`THIRD-PARTY-NOTICES`](THIRD-PARTY-NOTICES). The rest of the package is under the MIT License ([`LICENSE`](LICENSE)).
+Their notices are in [`THIRD-PARTY-NOTICES`](https://github.com/hugman/ltem/blob/main/ltem-lib/typescript/packages/ltem/THIRD-PARTY-NOTICES). The rest of the package is under the MIT License ([`LICENSE`](https://github.com/hugman/ltem/blob/main/ltem-lib/typescript/packages/ltem/LICENSE)).
 
 ## Development
 
-See the [workspace README](../../README.md).
+See the [workspace README](https://github.com/hugman/ltem/blob/main/ltem-lib/typescript/README.md).

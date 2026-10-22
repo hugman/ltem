@@ -1,5 +1,5 @@
 // The LTEM libraries the site shows (home cards, Libraries page), from the workspace READMEs
-// in ltem-lib/. All are at version 0.1.0 for LTEM 1.0 (the CodeMirror packages
+// in ltem-lib/. All are at version 0.1 for LTEM 1.0 (the CodeMirror packages
 // have their own versions).
 // status: 'available' = released for LTEM 1.0; 'planned' = being built.
 export type Status = 'available' | 'planned'

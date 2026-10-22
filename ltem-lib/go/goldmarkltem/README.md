@@ -1,6 +1,6 @@
 # goldmarkltem
 
-[goldmark](https://github.com/yuin/goldmark) extensions for [LTEM](../../../README.md) tables: Markdown pipe tables with merged cells and multi-row headers, as defined by the [LTEM specification](../../../spec/ltem-spec.md), version 1.0.
+[goldmark](https://github.com/yuin/goldmark) extensions for [LTEM](https://hugman.github.io/ltem/) tables: Markdown pipe tables with merged cells and multi-row headers, as defined by the [LTEM specification](https://github.com/hugman/ltem/blob/main/spec/ltem-spec.md), version 1.0.
 
 ```
 | Region | Revenue | <<  |
@@ -127,4 +127,4 @@ Block parsers of other extensions that interrupt paragraphs, other than goldmark
 
 ## Development
 
-See the [workspace README](../README.md#development). The tests render the specification examples, compare random documents with the core and tables without LTEM notation with goldmark's table extension, cover containers, inlines, escapes, alignment, several tables, the AST and incomplete input (every prefix of some documents, as a table arrives line by line), and fuzz the extension. The cases shared by the v1 and v2 tests are in `internal/gmtest`.
+See the [workspace README](https://github.com/hugman/ltem/blob/main/ltem-lib/go/README.md#development). The tests render the specification examples, compare random documents with the core and tables without LTEM notation with goldmark's table extension, cover containers, inlines, escapes, alignment, several tables, the AST and incomplete input (every prefix of some documents, as a table arrives line by line), and fuzz the extension. The cases shared by the v1 and v2 tests are in `internal/gmtest`.

@@ -1,6 +1,6 @@
 # marked-ltem
 
-[marked](https://marked.js.org/) extension for [LTEM](../../../../README.md) tables: Markdown pipe tables with merged cells and multi-row headers.
+[marked](https://marked.js.org/) extension for [LTEM](https://hugman.github.io/ltem/) tables: Markdown pipe tables with merged cells and multi-row headers.
 
 ```
 | Region | Revenue | <<  |
@@ -130,4 +130,4 @@ marked's own behavior outside tables shows in a few places:
 
 ## Development
 
-See the [workspace README](../../README.md). The tests render all specification examples as whole documents with marked 17 and 18, compare tables without LTEM notation with marked's own, compare thousands of random documents (with tables in block quotes and list items) with the tables of the core, and feed incomplete documents character by character.
+See the [workspace README](https://github.com/hugman/ltem/blob/main/ltem-lib/typescript/README.md). The tests render all specification examples as whole documents with marked 17 and 18, compare tables without LTEM notation with marked's own, compare thousands of random documents (with tables in block quotes and list items) with the tables of the core, and feed incomplete documents character by character.

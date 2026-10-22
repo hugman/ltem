@@ -11,10 +11,10 @@ The Go workspace of LTEM (LLM-friendly Table-Enhanced Markdown): Markdown pipe t
 
 | Package | Import path | What it is |
 |---|---|---|
-| [`ltem`](ltem/) | `github.com/hugman/ltem/ltem-lib/go/ltem` | The core library: find and parse tables, validate, render HTML, write canonical LTEM, the table model as JSON, where each cell is in the source |
-| [`cmd/ltem`](cmd/ltem/) | `github.com/hugman/ltem/ltem-lib/go/cmd/ltem` | The `ltem` command, which follows the [conformance](../../conformance/) command-line protocol |
-| [`goldmarkltem`](goldmarkltem/) | `github.com/hugman/ltem/ltem-lib/go/goldmarkltem` | goldmark v1 extension (goldmark 1.8) |
-| [`goldmarkltem/v2`](goldmarkltem/) | `github.com/hugman/ltem/ltem-lib/go/goldmarkltem/v2` | goldmark v2 extension (goldmark 2.1) |
+| [`ltem`](https://github.com/hugman/ltem/tree/main/ltem-lib/go/ltem) | `github.com/hugman/ltem/ltem-lib/go/ltem` | The core library: find and parse tables, validate, render HTML, write canonical LTEM, the table model as JSON, where each cell is in the source |
+| [`cmd/ltem`](https://github.com/hugman/ltem/tree/main/ltem-lib/go/cmd/ltem) | `github.com/hugman/ltem/ltem-lib/go/cmd/ltem` | The `ltem` command, which follows the [conformance](https://github.com/hugman/ltem/tree/main/conformance) command-line protocol |
+| [`goldmarkltem`](https://github.com/hugman/ltem/tree/main/ltem-lib/go/goldmarkltem) | `github.com/hugman/ltem/ltem-lib/go/goldmarkltem` | goldmark v1 extension (goldmark 1.8) |
+| [`goldmarkltem/v2`](https://github.com/hugman/ltem/tree/main/ltem-lib/go/goldmarkltem) | `github.com/hugman/ltem/ltem-lib/go/goldmarkltem/v2` | goldmark v2 extension (goldmark 2.1) |
 
 Status: version 0.1.0, the first release, for LTEM 1.0. Not yet published: the module has no version tag yet. The API may change before version 1.0.0.
 
@@ -82,7 +82,7 @@ ltem fmt      [FILE]           # rewrite every table in canonical form
 ltem write    [FILE]           # canonical LTEM of table models given as JSON
 ```
 
-See the package READMEs for the details: [`ltem/README.md`](ltem/README.md), [`cmd/ltem/README.md`](cmd/ltem/README.md) and [`goldmarkltem/README.md`](goldmarkltem/README.md).
+See the package READMEs for the details: [`ltem/README.md`](https://github.com/hugman/ltem/blob/main/ltem-lib/go/ltem/README.md), [`cmd/ltem/README.md`](https://github.com/hugman/ltem/blob/main/ltem-lib/go/cmd/ltem/README.md) and [`goldmarkltem/README.md`](https://github.com/hugman/ltem/blob/main/ltem-lib/go/goldmarkltem/README.md).
 
 ## Relation to the other implementations
 
@@ -117,7 +117,7 @@ The tests:
 
 | Test | What it checks |
 |---|---|
-| `ltem` conformance tests | Every case of [`cases/spec-examples.json`](../../conformance/cases/spec-examples.json) (table models, errors as a multiset, HTML after the conformance normalization) and [`cases/canonical.json`](../../conformance/cases/canonical.json), read directly |
+| `ltem` conformance tests | Every case of [`cases/spec-examples.json`](https://github.com/hugman/ltem/blob/main/conformance/cases/spec-examples.json) (table models, errors as a multiset, HTML after the conformance normalization) and [`cases/canonical.json`](https://github.com/hugman/ltem/blob/main/conformance/cases/canonical.json), read directly |
 | `ltem` differential tests | 3000 random documents (fixed seed; `LTEM_DIFF_DOCS` changes the number) against the Python reference, through `testdata/reference.py` and `uv`: table models, problems in order, row forms, table lines, cell sources, HTML, canonical form and `fmt`. And against the Rust command (`LTEM_RUST_CLI`, default `../rust/target/release/ltem`): `parse`, `validate --json`, `fmt` and `render`. Skipped if the references are not available |
 | `ltem` unit and fuzz tests | Line syntax, cell text and spans, writer round trips on random tables, sources, JSON, HTML, linear time on adversarial documents; fuzz targets `FuzzFindTables`, `FuzzTableAt`, `FuzzWriteModel` |
 | `cmd/ltem` tests | Every command, exit statuses, files and standard input, errors |
@@ -138,4 +138,4 @@ Both depend only on the Go standard library (BSD-3-Clause). The core package `lt
 
 ## License
 
-MIT ([`LICENSE`](LICENSE)).
+MIT ([`LICENSE`](https://github.com/hugman/ltem/blob/main/ltem-lib/go/LICENSE)).

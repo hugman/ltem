@@ -10,7 +10,7 @@ readme = "README.md"
 requires-python = ">=3.10"
 license = "MIT"
 license-files = ["LICENSE"]
-authors = [{ name = "Sangkeun Jung" }]
+authors = [{ name = "EurekaAI Co., Ltd." }]
 keywords = ["markdown", "python-markdown", "mkdocs", "table", "colspan", "rowspan", "ltem"]
 classifiers = [
     "Development Status :: 3 - Alpha",
@@ -18,6 +18,12 @@ classifiers = [
     "Topic :: Text Processing :: Markup :: Markdown",
 ]
 dependencies = ["ltem-core", "markdown>=3.6"]
+
+[project.urls]
+Homepage = "https://hugman.github.io/ltem/"
+Repository = "https://github.com/hugman/ltem"
+Source = "https://github.com/hugman/ltem/tree/main/ltem-lib/python/markdown-ltem"
+Issues = "https://github.com/hugman/ltem/issues"
 
 [project.entry-points."markdown.extensions"]
 ltem = "markdown_ltem:LtemExtension"

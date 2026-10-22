@@ -1,6 +1,6 @@
 # mdit-py-ltem
 
-A [markdown-it-py](https://github.com/executablebooks/markdown-it-py) plugin for [LTEM](../../../README.md) tables: Markdown pipe tables with merged cells and multi-row headers.
+A [markdown-it-py](https://github.com/executablebooks/markdown-it-py) plugin for [LTEM](https://hugman.github.io/ltem/) tables: Markdown pipe tables with merged cells and multi-row headers.
 
 Status: version 0.1.0, the first release, for LTEM 1.0.
 
@@ -21,7 +21,7 @@ The plugin replaces markdown-it's GFM table rule, and enables it in presets wher
 
 Every `th_open` and `td_open` token has `map = [line, line + 1]` and `meta["ltem"]`, a dict with the cell's `row`, `col`, `rowspan`, `colspan`, its document `line`, and `start` and `end`: the columns of the cell's source in that raw document line, in Python string units (code points). Use them to link a rendered cell back to its source.
 
-The tables themselves are resolved by the [`ltem-core`](../ltem/) package (imported as `ltem`).
+The tables themselves are resolved by the [`ltem-core`](https://github.com/hugman/ltem/tree/main/ltem-lib/python/ltem) package (imported as `ltem`).
 
 ## Development
 

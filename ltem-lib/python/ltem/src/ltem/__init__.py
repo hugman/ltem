@@ -22,7 +22,7 @@ from .model import Cell, CellSource, Problem, Table
 from .parser import ParseResult, find_tables, parse_table
 from .writer import write, write_with_sources
 
-__version__ = "0.1.0"
+__version__ = "0.1.1"
 SPEC_VERSION = "1.0"
 
 __all__ = [

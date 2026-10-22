@@ -1,10 +1,10 @@
 # ltem (Go)
 
-The Go core of LTEM (LLM-friendly Table-Enhanced Markdown), version 1.0 of the [specification](../../../spec/ltem-spec.md): GitHub Flavored Markdown pipe tables with merged cells (`<<`, `^^`, `{c:N}`, `{r:M}`, `{c:N,r:M}`), several header rows above the delimiter row, and line breaks in cells (`\\`).
+The Go core of LTEM (LLM-friendly Table-Enhanced Markdown), version 1.0 of the [specification](https://github.com/hugman/ltem/blob/main/spec/ltem-spec.md): GitHub Flavored Markdown pipe tables with merged cells (`<<`, `^^`, `{c:N}`, `{r:M}`, `{c:N,r:M}`), several header rows above the delimiter row, and line breaks in cells (`\\`).
 
 The package:
 
-- finds and parses LTEM tables into the [table model](../../../ast/table-model.md) and reports validation problems (rules V1–V7, V13, V14)
+- finds and parses LTEM tables into the [table model](https://github.com/hugman/ltem/blob/main/ast/table-model.md) and reports validation problems (rules V1–V7, V13, V14)
 - renders a table as HTML with real `colspan` and `rowspan`, with a pluggable renderer for cell text
 - writes a table model as canonical LTEM, and rewrites the tables of a document in canonical form
 - reads and writes the table model as JSON
@@ -61,7 +61,7 @@ A `Problem` has the `Rule` (`V1` … `V7`, `V13`, `V14`), the grid `Row` and `Co
 
 ### The table model as JSON
 
-`Table` marshals to the table model of [`table.schema.json`](../../../ast/table.schema.json), with `"version": "1.0"` and the keys in the schema's order and the cells sorted. Unmarshaling requires every field, rejects unknown fields and other versions, and checks the types. `Table.Check` reports the violations of the rules that the schema cannot express ([`table-model.md`](../../../ast/table-model.md)), and also sizes below 1, unknown alignments, and grids of more than 2^28 positions. `Write` refuses a table that fails `Check`, with a `*ModelError`.
+`Table` marshals to the table model of [`table.schema.json`](https://github.com/hugman/ltem/blob/main/ast/table.schema.json), with `"version": "1.0"` and the keys in the schema's order and the cells sorted. Unmarshaling requires every field, rejects unknown fields and other versions, and checks the types. `Table.Check` reports the violations of the rules that the schema cannot express ([`table-model.md`](https://github.com/hugman/ltem/blob/main/ast/table-model.md)), and also sizes below 1, unknown alignments, and grids of more than 2^28 positions. `Write` refuses a table that fails `Check`, with a `*ModelError`.
 
 ## Behavior notes
 
@@ -70,4 +70,4 @@ A `Problem` has the `Rule` (`V1` … `V7`, `V13`, `V14`), the grid `Row` and `Co
 
 ## Tests
 
-See the [workspace README](../README.md#development). The tests read the conformance cases directly, compare the package with the Python and Rust implementations on random documents, and fuzz the parser.
+See the [workspace README](https://github.com/hugman/ltem/blob/main/ltem-lib/go/README.md#development). The tests read the conformance cases directly, compare the package with the Python and Rust implementations on random documents, and fuzz the parser.

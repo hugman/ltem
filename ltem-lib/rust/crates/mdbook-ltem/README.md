@@ -1,6 +1,6 @@
 # mdbook-ltem
 
-[mdBook](https://rust-lang.github.io/mdBook/) preprocessor for [LTEM](../../../../README.md) tables: Markdown pipe tables with merged cells and multi-row headers.
+[mdBook](https://rust-lang.github.io/mdBook/) preprocessor for [LTEM](https://hugman.github.io/ltem/) tables: Markdown pipe tables with merged cells and multi-row headers.
 
 ```
 | Region | Revenue | <<  |
@@ -54,7 +54,7 @@ mdBook hands a preprocessor the book as JSON (`[context, book]` on standard inpu
 
 For each chapter:
 
-1. It finds the LTEM tables with [`pulldown-cmark-ltem`](../pulldown-cmark-ltem/), using the pulldown-cmark options of mdBook's HTML renderer, which it takes from `[output.html]` in the context: `smart-punctuation`, `definition-lists` and `admonitions` (on by default in mdBook 0.5; in 0.4 only smart punctuation existed, off by default, turned on by `smart-punctuation` or `curly-quotes`). So the block structure is the one mdBook sees: tables are found in paragraphs, block quotes and list items, never in code blocks or HTML blocks. See that crate's README for the details and its known differences.
+1. It finds the LTEM tables with [`pulldown-cmark-ltem`](https://github.com/hugman/ltem/tree/main/ltem-lib/rust/crates/pulldown-cmark-ltem), using the pulldown-cmark options of mdBook's HTML renderer, which it takes from `[output.html]` in the context: `smart-punctuation`, `definition-lists` and `admonitions` (on by default in mdBook 0.5; in 0.4 only smart punctuation existed, off by default, turned on by `smart-punctuation` or `curly-quotes`). So the block structure is the one mdBook sees: tables are found in paragraphs, block quotes and list items, never in code blocks or HTML blocks. See that crate's README for the details and its known differences.
 2. It replaces the lines of each LTEM table that mdBook would not render the same way on its own with one line: the container prefix of the table's first line (such as `> ` or a list marker), an empty HTML comment, and the table's HTML in a `<div class="table-wrapper">`, as mdBook wraps its own tables so that wide tables scroll. A line that begins with `<!--` is an HTML block that ends at the line holding `-->`, which is the same line, so the lines after the table are read as before and a tight list stays tight. Cell text is rendered by pulldown-cmark with mdBook's options and the chapter's link reference definitions; mdBook then rewrites `.md` links in it, as it does in all HTML.
 3. pulldown-cmark reads some lines as the delimiter row of a GFM table where GFM and LTEM read none: `- | -` below a paragraph line, which is a list item, or a cell such as `-:-`. At the end of such a line it adds an empty HTML comment, so that mdBook renders the lines as LTEM does; the line itself renders as before.
 
@@ -91,4 +91,4 @@ cargo install mdbook --version 0.5.4 --no-default-features --features search --r
 
 ## License
 
-MIT ([`LICENSE`](LICENSE)). The program includes two generated data tables of the `ltem` crate, whose notices are in [`THIRD-PARTY-NOTICES`](THIRD-PARTY-NOTICES). Its dependencies are [`pulldown-cmark-ltem`](../pulldown-cmark-ltem/) and the [`ltem`](../ltem/) core (MIT), pulldown-cmark (MIT) and serde_json (MIT or Apache-2.0), with their own dependencies under MIT, Apache-2.0 or the Unlicense.
+MIT ([`LICENSE`](https://github.com/hugman/ltem/blob/main/ltem-lib/rust/crates/mdbook-ltem/LICENSE)). The program includes two generated data tables of the `ltem` crate, whose notices are in [`THIRD-PARTY-NOTICES`](https://github.com/hugman/ltem/blob/main/ltem-lib/rust/crates/mdbook-ltem/THIRD-PARTY-NOTICES). Its dependencies are [`pulldown-cmark-ltem`](https://github.com/hugman/ltem/tree/main/ltem-lib/rust/crates/pulldown-cmark-ltem) and the [`ltem`](https://github.com/hugman/ltem/tree/main/ltem-lib/rust/crates/ltem) core (MIT), pulldown-cmark (MIT) and serde_json (MIT or Apache-2.0), with their own dependencies under MIT, Apache-2.0 or the Unlicense.

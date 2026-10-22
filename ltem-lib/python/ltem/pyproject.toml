@@ -4,13 +4,13 @@ build-backend = "hatchling.build"
 
 [project]
 name = "ltem-core"
-version = "0.1.0"
+version = "0.1.1"
 description = "LTEM (LLM-friendly Table-Enhanced Markdown): Markdown tables with merged cells and multi-row headers"
 readme = "README.md"
 requires-python = ">=3.10"
 license = "MIT"
 license-files = ["LICENSE"]
-authors = [{ name = "Sangkeun Jung" }]
+authors = [{ name = "EurekaAI Co., Ltd." }]
 keywords = ["markdown", "table", "colspan", "rowspan", "llm", "ltem"]
 classifiers = [
     "Development Status :: 3 - Alpha",
@@ -20,6 +20,12 @@ classifiers = [
     "Topic :: Text Processing :: Markup :: Markdown",
 ]
 dependencies = []
+
+[project.urls]
+Homepage = "https://hugman.github.io/ltem/"
+Repository = "https://github.com/hugman/ltem"
+Source = "https://github.com/hugman/ltem/tree/main/ltem-lib/python/ltem"
+Issues = "https://github.com/hugman/ltem/issues"
 
 [project.optional-dependencies]
 markdown = ["markdown-it-py>=3"]

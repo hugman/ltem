@@ -3,6 +3,16 @@
   "version": "0.1.0",
   "description": "remark plugin for LTEM tables: merged cells (colspan, rowspan) and multi-row headers",
   "license": "MIT",
+  "author": "EurekaAI Co., Ltd.",
+  "homepage": "https://hugman.github.io/ltem/",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hugman/ltem.git",
+    "directory": "ltem-lib/typescript/packages/remark-ltem"
+  },
+  "bugs": {
+    "url": "https://github.com/hugman/ltem/issues"
+  },
   "keywords": [
     "remark",
     "remark-plugin",

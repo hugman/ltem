@@ -1,6 +1,6 @@
 # comrak-ltem
 
-[comrak](https://crates.io/crates/comrak) adapter for [LTEM](../../../../README.md) tables: Markdown pipe tables with merged cells and multi-row headers.
+[comrak](https://crates.io/crates/comrak) adapter for [LTEM](https://hugman.github.io/ltem/) tables: Markdown pipe tables with merged cells and multi-row headers.
 
 ```
 | Region | Revenue | <<  |
@@ -110,4 +110,4 @@ The tests read the conformance cases from `conformance/cases/spec-examples.json`
 
 ## License
 
-MIT ([`LICENSE`](LICENSE)). The crate depends on the [`ltem`](../ltem/) core (MIT) and on comrak (BSD-2-Clause), whose own dependencies are under MIT, Apache-2.0 or Zlib, with Unicode data under the Unicode License. A program that includes comrak has to reproduce comrak's copyright notice and license (BSD-2-Clause) with its binary.
+MIT ([`LICENSE`](https://github.com/hugman/ltem/blob/main/ltem-lib/rust/crates/comrak-ltem/LICENSE)). The crate depends on the [`ltem`](https://github.com/hugman/ltem/tree/main/ltem-lib/rust/crates/ltem) core (MIT) and on comrak (BSD-2-Clause), whose own dependencies are under MIT, Apache-2.0 or Zlib, with Unicode data under the Unicode License. A program that includes comrak has to reproduce comrak's copyright notice and license (BSD-2-Clause) with its binary.

@@ -16,7 +16,7 @@ LTEM extends Markdown pipe tables so they can express merged cells and multi-row
 - `^^` merges a cell with the cell above it (rowspan).
 - Every row above the `|---|` delimiter row is a header row.
 
-**Status:** LTEM 1.0. The specification, the table model and the conformance tests are final. The libraries are at version 0.1.0. Version 1.0 covers merged cells and multi-row headers.
+**Status:** LTEM 1.0. The specification, the table model and the conformance tests are final. The libraries are at version 0.1. Version 1.0 covers merged cells and multi-row headers.
 
 ## Repository layout
 

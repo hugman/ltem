@@ -1,6 +1,6 @@
 # LTEM for Lua, Pandoc and Quarto
 
-[LTEM](../../README.md) (LLM-friendly Table-Enhanced Markdown) tables in Lua: Markdown pipe tables with merged cells (`<<`, `^^`, `{c:N}`, `{r:M}`, `{c:N,r:M}`), several header rows above the delimiter row, and line breaks in cells (`\\`), as version 1.0 of the [specification](../../spec/ltem-spec.md) defines them.
+[LTEM](https://hugman.github.io/ltem/) (LLM-friendly Table-Enhanced Markdown) tables in Lua: Markdown pipe tables with merged cells (`<<`, `^^`, `{c:N}`, `{r:M}`, `{c:N,r:M}`), several header rows above the delimiter row, and line breaks in cells (`\\`), as version 1.0 of the [specification](https://github.com/hugman/ltem/blob/main/spec/ltem-spec.md) defines them.
 
 ```
 | Region | Revenue | <<  |
@@ -13,13 +13,13 @@ This is a table whose "Region" cell spans two rows and whose "Revenue" cell span
 
 | File | What it is |
 |---|---|
-| [`ltem.lua`](ltem.lua) | The core: a pure Lua 5.4 module without C code. It finds and parses tables, validates them, renders HTML and writes canonical LTEM. It runs in any Lua 5.4, including Pandoc's. |
-| [`cli.lua`](cli.lua) | A command line for `pandoc lua`, with the protocol of the [conformance tests](../../conformance/) |
-| [`pandoc/ltem-markdown.lua`](pandoc/ltem-markdown.lua) | A Pandoc custom reader: Pandoc's Markdown with LTEM tables |
-| [`pandoc/ltem-commonmark_x.lua`](pandoc/ltem-commonmark_x.lua) | A Pandoc custom reader: `commonmark_x` with LTEM tables |
-| [`pandoc/ltem-filter.lua`](pandoc/ltem-filter.lua) | A Pandoc filter that turns code blocks with the class `ltem` into tables, for any input format |
-| [`pandoc/ltem-pandoc.lua`](pandoc/ltem-pandoc.lua) | The module behind the readers and the filter |
-| [`_extensions/ltem/`](_extensions/ltem/) | A Quarto extension with the filter |
+| [`ltem.lua`](https://github.com/hugman/ltem/blob/main/ltem-lib/lua/ltem.lua) | The core: a pure Lua 5.4 module without C code. It finds and parses tables, validates them, renders HTML and writes canonical LTEM. It runs in any Lua 5.4, including Pandoc's. |
+| [`cli.lua`](https://github.com/hugman/ltem/blob/main/ltem-lib/lua/cli.lua) | A command line for `pandoc lua`, with the protocol of the [conformance tests](https://github.com/hugman/ltem/tree/main/conformance) |
+| [`pandoc/ltem-markdown.lua`](https://github.com/hugman/ltem/blob/main/ltem-lib/lua/pandoc/ltem-markdown.lua) | A Pandoc custom reader: Pandoc's Markdown with LTEM tables |
+| [`pandoc/ltem-commonmark_x.lua`](https://github.com/hugman/ltem/blob/main/ltem-lib/lua/pandoc/ltem-commonmark_x.lua) | A Pandoc custom reader: `commonmark_x` with LTEM tables |
+| [`pandoc/ltem-filter.lua`](https://github.com/hugman/ltem/blob/main/ltem-lib/lua/pandoc/ltem-filter.lua) | A Pandoc filter that turns code blocks with the class `ltem` into tables, for any input format |
+| [`pandoc/ltem-pandoc.lua`](https://github.com/hugman/ltem/blob/main/ltem-lib/lua/pandoc/ltem-pandoc.lua) | The module behind the readers and the filter |
+| [`_extensions/ltem/`](https://github.com/hugman/ltem/tree/main/ltem-lib/lua/_extensions/ltem) | A Quarto extension with the filter |
 
 Status: version 0.1.0, the first release, for LTEM 1.0. It is not published yet (no LuaRocks package, no Quarto extension registry entry). The API may change before version 1.0.0.
 
@@ -49,13 +49,13 @@ end
 | `find_tables(markdown)` | The tables of a document: a list of parse results. Like the other LTEM cores, it is a light scan: it splits the text into lines (at `\n`, `\r\n` or `\r`) and blocks, and skips fenced and indented code. It does not look into block quotes or list items; the Pandoc readers do. |
 | `parse_table(block, first_line, options)` | The first table in one block of non-blank lines (a string or a list of lines), or a result with `table = nil`. `first_line` is the line number of the block's first line (default 1). `options.ends_body` is a function of a line that returns true where the host Markdown processor starts another block, which ends a table body too. |
 | `render_html(table, inline)` | HTML in the form of the specification's examples. `inline` renders one line of cell text; the default `plain_inline` applies CommonMark backslash escapes and HTML escaping only. |
-| `write(table)` | The canonical LTEM of a table model, without a final line break, or `nil` and a message if the model breaks the rules of [`ast/table-model.md`](../../ast/table-model.md) |
+| `write(table)` | The canonical LTEM of a table model, without a final line break, or `nil` and a message if the model breaks the rules of [`ast/table-model.md`](https://github.com/hugman/ltem/blob/main/ast/table-model.md) |
 | `check(table)` | The violations of the model rules, as a list of messages |
 | `read_model(value)` | A table model from a decoded JSON value, or `nil` and a message. Numbers may be floats with integral values; an `align` entry that is not a string (`nil`, `false` or a JSON null sentinel) means no alignment. |
 
 A parse result has:
 
-- `table`: the table model, as plain Lua tables with the fields of [`ast/table.schema.json`](../../ast/table.schema.json): `version`, `rows`, `cols`, `header_rows`, `align` and `cells` (`row`, `col`, `rowspan`, `colspan`, `text`). In `align`, `false` stands for JSON `null` (no alignment).
+- `table`: the table model, as plain Lua tables with the fields of [`ast/table.schema.json`](https://github.com/hugman/ltem/blob/main/ast/table.schema.json): `version`, `rows`, `cols`, `header_rows`, `align` and `cells` (`row`, `col`, `rowspan`, `colspan`, `text`). In `align`, `false` stands for JSON `null` (no alignment).
 - `problems`: the validation problems (rules V1–V7, V13, V14), each `{rule, row, col, message, severity}`. `col` is `nil` for V14, which concerns a whole row; `severity` is `"warning"` for V14 and `"error"` otherwise.
 - `forms`: how each row was read: `"grid"`, `"compact"` or `"padded"` (V14)
 - `sources`: where each cell's source is, in the order of `table.cells`: `{row, col, rowspan, colspan, line, start, stop}`
@@ -221,4 +221,4 @@ The Quarto extension must be self-contained, so it holds copies of `ltem.lua`, `
 
 ## License
 
-MIT ([`LICENSE`](LICENSE)).
+MIT ([`LICENSE`](https://github.com/hugman/ltem/blob/main/ltem-lib/lua/LICENSE)).

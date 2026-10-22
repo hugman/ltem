@@ -1,8 +1,8 @@
 # ltem (Python)
 
-Reference Python implementation of [LTEM](../../../README.md): Markdown pipe tables with merged cells and multi-row headers. It follows the LTEM specification, version 1.0.
+Reference Python implementation of [LTEM](https://hugman.github.io/ltem/): Markdown pipe tables with merged cells and multi-row headers. It follows the LTEM specification, version 1.0.
 
-Status: version 0.1.0, the first release, for LTEM 1.0. The API may change before version 1.0.0.
+Status: version 0.1.1, for LTEM 1.0. The API may change before version 1.0.0.
 
 ## Install
 
@@ -74,4 +74,4 @@ uv sync --all-packages
 uv run --directory ltem pytest
 ```
 
-The tests run the conformance cases in [`conformance/`](../../../conformance/).
+The tests run the conformance cases in [`conformance/`](https://github.com/hugman/ltem/tree/main/conformance).

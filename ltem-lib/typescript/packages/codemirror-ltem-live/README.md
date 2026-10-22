@@ -1,6 +1,6 @@
 # codemirror-ltem-live
 
-Live Preview for Markdown in [CodeMirror 6](https://codemirror.net/), with [LTEM](../../../../README.md) tables: Markdown marks are shown only where the cursor is, and the rest of the document is shown as it will be rendered. Tables are LTEM tables, shown and edited as tables by [`codemirror-ltem`](../codemirror-ltem/).
+Live Preview for Markdown in [CodeMirror 6](https://codemirror.net/), with [LTEM](https://hugman.github.io/ltem/) tables: Markdown marks are shown only where the cursor is, and the rest of the document is shown as it will be rendered. Tables are LTEM tables, shown and edited as tables by [`codemirror-ltem`](https://github.com/hugman/ltem/tree/main/ltem-lib/typescript/packages/codemirror-ltem).
 
 Status: version 0.1.10. It works with LTEM 1.0 and does not change the Markdown or LTEM syntax. Its features are on by default, and an application can switch each of them in its settings, with names and descriptions in English and Korean ([Settings](#settings)).
 

@@ -1,8 +1,8 @@
 # codemirror-ltem
 
-[LTEM](../../../../README.md) tables in [CodeMirror 6](https://codemirror.net/): Markdown pipe tables with merged cells and multi-row headers, recognized, highlighted, validated and edited as tables.
+[LTEM](https://hugman.github.io/ltem/) tables in [CodeMirror 6](https://codemirror.net/): Markdown pipe tables with merged cells and multi-row headers, recognized, highlighted, validated and edited as tables.
 
-Status: version 0.2.11. For Live Preview of the whole Markdown document, with these tables, see [`codemirror-ltem-live`](../codemirror-ltem-live/). It works with LTEM 1.0 through the `ltem` package (0.1.0) and does not change the LTEM syntax.
+Status: version 0.2.11. For Live Preview of the whole Markdown document, with these tables, see [`codemirror-ltem-live`](https://github.com/hugman/ltem/tree/main/ltem-lib/typescript/packages/codemirror-ltem-live). It works with LTEM 1.0 through the `ltem` package (0.1.0) and does not change the LTEM syntax.
 
 ```ts
 import { EditorView, basicSetup } from "codemirror";
@@ -17,7 +17,7 @@ new EditorView({
 
 ## What it does
 
-- **Recognizes LTEM tables.** A Lezer Markdown extension hands each paragraph to the LTEM core, which decides where the tables are, so the editor finds exactly the tables that LTEM renderers (such as [`markdown-it-ltem`](../markdown-it-ltem/)) render. Rows, the markers `<<` and `^^`, span attributes, `\\` line breaks and inline Markdown in cells become syntax nodes, with highlighting and folding; pipes are drawn as decorations on the visible lines only. Plain text gets no nodes, so a keystroke in a table of 1,000 rows costs a few milliseconds.
+- **Recognizes LTEM tables.** A Lezer Markdown extension hands each paragraph to the LTEM core, which decides where the tables are, so the editor finds exactly the tables that LTEM renderers (such as [`markdown-it-ltem`](https://www.npmjs.com/package/markdown-it-ltem)) render. Rows, the markers `<<` and `^^`, span attributes, `\\` line breaks and inline Markdown in cells become syntax nodes, with highlighting and folding; pipes are drawn as decorations on the visible lines only. Plain text gets no nodes, so a keystroke in a table of 1,000 rows costs a few milliseconds.
 - **Shows problems, with fixes.** Violations of the LTEM rules (specification Section 5) are marked on the cell concerned; a row that fits neither as a grid row nor as a compact row (V14) is a warning. Each problem offers a fix: *Fix table* writes the table so that it reads as it renders; *Keep the text* shrinks a merged cell that covers written text (V5, V6) instead of dropping the text; *Write as text* escapes a marker that has no cell to extend (V13). Messages are in English or Korean, or your own.
 - **Tolerates half-written tables.** While an edit briefly breaks the table the cursor is in, its lines keep a table look; problems wait until you stop typing; nothing changes during an IME composition.
 - **Edits tables.** Tab, Shift-Tab and Enter move between cells and line up the columns as they go (Tab after the last cell, or Enter below the last row, adds a row; Enter on an empty last row leaves the table). Commands insert, delete and move rows and columns, make rows header rows or body rows, merge cells to the right or down, split them, set column alignment and insert a new table. Wide characters (Hangul, CJK) count as two columns. A command changes only the parts of lines that differ, so it is one small undo step even in a large table.

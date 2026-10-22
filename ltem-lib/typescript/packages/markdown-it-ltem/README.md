@@ -1,6 +1,6 @@
 # markdown-it-ltem
 
-[markdown-it](https://github.com/markdown-it/markdown-it) plugin for [LTEM](../../../../README.md) tables: Markdown pipe tables with merged cells and multi-row headers.
+[markdown-it](https://github.com/markdown-it/markdown-it) plugin for [LTEM](https://hugman.github.io/ltem/) tables: Markdown pipe tables with merged cells and multi-row headers.
 
 ```
 | Region | Revenue | <<  |
@@ -11,7 +11,7 @@
 
 renders as a table whose "Region" cell spans two rows and whose "Revenue" cell spans two columns.
 
-Status: version 0.1.0, the first release, for LTEM 1.0. Not yet published to npm. The API may change before version 1.0.0.
+Status: version 0.1.1, for LTEM 1.0. The API may change before version 1.0.0.
 
 ## Install
 
@@ -44,4 +44,4 @@ Each `th_open` and `td_open` token has `map = [line, line + 1]` (the document li
 
 ## Development
 
-See the [workspace README](../../README.md). The tests render all specification examples as whole documents with markdown-it 14 and 15.
+See the [workspace README](https://github.com/hugman/ltem/blob/main/ltem-lib/typescript/README.md). The tests render all specification examples as whole documents with markdown-it 14 and 15.

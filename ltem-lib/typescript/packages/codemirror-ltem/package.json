@@ -3,6 +3,16 @@
   "version": "0.2.11",
   "description": "LTEM tables in CodeMirror 6: recognition, highlighting, validation with fixes, table editing, ranges of cells, a table menu, HTML and TSV paste and copy, tables shown and edited as tables",
   "license": "MIT",
+  "author": "EurekaAI Co., Ltd.",
+  "homepage": "https://hugman.github.io/ltem/",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hugman/ltem.git",
+    "directory": "ltem-lib/typescript/packages/codemirror-ltem"
+  },
+  "bugs": {
+    "url": "https://github.com/hugman/ltem/issues"
+  },
   "keywords": [
     "codemirror",
     "codemirror6",
@@ -39,7 +49,7 @@
     "bench": "node bench/keystroke.ts && node bench/baseline.ts && npm run bundle:test && node test-browser/perf.ts"
   },
   "dependencies": {
-    "ltem-core": "0.1.0"
+    "ltem-core": "0.1.1"
   },
   "peerDependencies": {
     "@codemirror/lang-markdown": "^6.3.0",

@@ -1,6 +1,6 @@
 # mdast-util-ltem
 
-[mdast](https://github.com/syntax-tree/mdast) utilities for [LTEM](../../../../README.md) tables: Markdown pipe tables with merged cells and multi-row headers. They turn LTEM tables into mdast `table` nodes, write them back as Markdown, and turn them into HTML through hast.
+[mdast](https://github.com/syntax-tree/mdast) utilities for [LTEM](https://hugman.github.io/ltem/) tables: Markdown pipe tables with merged cells and multi-row headers. They turn LTEM tables into mdast `table` nodes, write them back as Markdown, and turn them into HTML through hast.
 
 ```
 | Region | Revenue | <<  |
@@ -11,7 +11,7 @@
 
 becomes a table whose "Region" cell spans two rows and whose "Revenue" cell spans two columns.
 
-Use it with the syntax extension of [`micromark-extension-ltem`](../micromark-extension-ltem/). With remark, use [`remark-ltem`](../remark-ltem/), which wires both up.
+Use it with the syntax extension of [`micromark-extension-ltem`](https://github.com/hugman/ltem/tree/main/ltem-lib/typescript/packages/micromark-extension-ltem). With remark, use [`remark-ltem`](https://github.com/hugman/ltem/tree/main/ltem-lib/typescript/packages/remark-ltem), which wires both up.
 
 Status: version 0.1.0, the first release, for LTEM 1.0. Not yet published to npm. The API may change before version 1.0.0.
 
@@ -83,8 +83,8 @@ When mdast-util-gfm's extension comes after this one, its `table` handler wins a
 
 All 46 examples of the specification render as expected, as whole documents, with and without mdast-util-gfm, and survive a round trip through Markdown.
 
-micromark's own rules show as described for [`micromark-extension-ltem`](../micromark-extension-ltem/#known-differences). Escaped pipes in code, math, raw HTML and autolinks of cells lose their backslash in the syntax tree, as the specification asks.
+micromark's own rules show as described for [`micromark-extension-ltem`](https://github.com/hugman/ltem/tree/main/ltem-lib/typescript/packages/micromark-extension-ltem#known-differences). Escaped pipes in code, math, raw HTML and autolinks of cells lose their backslash in the syntax tree, as the specification asks.
 
 ## Development
 
-See the [workspace README](../../README.md). The tests render all specification examples as whole documents, check the table structure and cell positions against the core on random documents, compare thousands of random documents with the tables of the core, turn changed and invalid trees into HTML and Markdown, and write the specification examples and random documents to Markdown and read them back.
+See the [workspace README](https://github.com/hugman/ltem/blob/main/ltem-lib/typescript/README.md). The tests render all specification examples as whole documents, check the table structure and cell positions against the core on random documents, compare thousands of random documents with the tables of the core, turn changed and invalid trees into HTML and Markdown, and write the specification examples and random documents to Markdown and read them back.

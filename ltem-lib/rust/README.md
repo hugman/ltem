@@ -4,11 +4,11 @@ The Rust workspace of LTEM (LLM-friendly Table-Enhanced Markdown). It holds the 
 
 | Crate | Folder | What it is |
 |---|---|---|
-| [`ltem`](crates/ltem/) | `crates/ltem/` | The core library: parse, validate, render HTML, write canonical LTEM, convert HTML tables to LTEM |
-| [`ltem-cli`](crates/ltem-cli/) | `crates/ltem-cli/` | The `ltem` command, which follows the [conformance](../../conformance/) command-line protocol |
-| [`pulldown-cmark-ltem`](crates/pulldown-cmark-ltem/) | `crates/pulldown-cmark-ltem/` | pulldown-cmark adapter: LTEM tables as HTML blocks, everything else from pulldown-cmark |
-| [`mdbook-ltem`](crates/mdbook-ltem/) | `crates/mdbook-ltem/` | mdBook preprocessor |
-| [`comrak-ltem`](crates/comrak-ltem/) | `crates/comrak-ltem/` | comrak adapter: LTEM tables in comrak's AST |
+| [`ltem`](https://github.com/hugman/ltem/tree/main/ltem-lib/rust/crates/ltem) | `crates/ltem/` | The core library: parse, validate, render HTML, write canonical LTEM, convert HTML tables to LTEM |
+| [`ltem-cli`](https://github.com/hugman/ltem/tree/main/ltem-lib/rust/crates/ltem-cli) | `crates/ltem-cli/` | The `ltem` command, which follows the [conformance](https://github.com/hugman/ltem/tree/main/conformance) command-line protocol |
+| [`pulldown-cmark-ltem`](https://github.com/hugman/ltem/tree/main/ltem-lib/rust/crates/pulldown-cmark-ltem) | `crates/pulldown-cmark-ltem/` | pulldown-cmark adapter: LTEM tables as HTML blocks, everything else from pulldown-cmark |
+| [`mdbook-ltem`](https://github.com/hugman/ltem/tree/main/ltem-lib/rust/crates/mdbook-ltem) | `crates/mdbook-ltem/` | mdBook preprocessor |
+| [`comrak-ltem`](https://github.com/hugman/ltem/tree/main/ltem-lib/rust/crates/comrak-ltem) | `crates/comrak-ltem/` | comrak adapter: LTEM tables in comrak's AST |
 
 All crates are at version 0.1.0, for LTEM 1.0, and are not yet published to crates.io.
 
@@ -37,4 +37,4 @@ The `ltem` crate has one optional feature, `commonmark-inline`. It adds `ltem::c
 
 The Rust core mirrors the Python implementation (`../python/ltem/`), which is the semantic reference, module by module: `syntax`, `grid`, `parser`, `model`, `html`, `writer` and `fromhtml`. Like the TypeScript implementation, it tries compact rows with an undo log instead of copying the grid. The three implementations give the same table models, problems, canonical output and HTML on randomized documents, and the HTML converter gives the same models and warnings as the Python one.
 
-See [`crates/ltem/README.md`](crates/ltem/README.md) for the API and for why the HTML converter has its own HTML tokenizer.
+See [`crates/ltem/README.md`](https://github.com/hugman/ltem/blob/main/ltem-lib/rust/crates/ltem/README.md) for the API and for why the HTML converter has its own HTML tokenizer.

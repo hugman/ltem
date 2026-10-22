@@ -1,6 +1,6 @@
 # micromark-extension-ltem
 
-[micromark](https://github.com/micromark/micromark) extensions for [LTEM](../../../../README.md) tables: Markdown pipe tables with merged cells and multi-row headers.
+[micromark](https://github.com/micromark/micromark) extensions for [LTEM](https://hugman.github.io/ltem/) tables: Markdown pipe tables with merged cells and multi-row headers.
 
 ```
 | Region | Revenue | <<  |
@@ -11,7 +11,7 @@
 
 renders as a table whose "Region" cell spans two rows and whose "Revenue" cell spans two columns.
 
-This package holds the syntax extension and an HTML extension for micromark. For a syntax tree, use it with [`mdast-util-ltem`](../mdast-util-ltem/); with remark, use [`remark-ltem`](../remark-ltem/), which wires both up.
+This package holds the syntax extension and an HTML extension for micromark. For a syntax tree, use it with [`mdast-util-ltem`](https://github.com/hugman/ltem/tree/main/ltem-lib/typescript/packages/mdast-util-ltem); with remark, use [`remark-ltem`](https://github.com/hugman/ltem/tree/main/ltem-lib/typescript/packages/remark-ltem), which wires both up.
 
 Status: version 0.1.0, the first release, for LTEM 1.0. Not yet published to npm. The API may change before version 1.0.0.
 
@@ -77,4 +77,4 @@ micromark's own rules show in a few places:
 
 ## Development
 
-See the [workspace README](../../README.md). The tests render all specification examples as whole documents, compare tables without LTEM notation with micromark-extension-gfm, compare thousands of random documents (with tables in block quotes and list items) with the tables of the core, feed incomplete documents character by character, and run micromark's development build, which checks the events.
+See the [workspace README](https://github.com/hugman/ltem/blob/main/ltem-lib/typescript/README.md). The tests render all specification examples as whole documents, compare tables without LTEM notation with micromark-extension-gfm, compare thousands of random documents (with tables in block quotes and list items) with the tables of the core, feed incomplete documents character by character, and run micromark's development build, which checks the events.

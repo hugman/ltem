@@ -1,8 +1,18 @@
 {
   "name": "ltem-core",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "LTEM (LLM-friendly Table-Enhanced Markdown): Markdown tables with merged cells and multi-row headers",
   "license": "MIT",
+  "author": "EurekaAI Co., Ltd.",
+  "homepage": "https://hugman.github.io/ltem/",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hugman/ltem.git",
+    "directory": "ltem-lib/typescript/packages/ltem"
+  },
+  "bugs": {
+    "url": "https://github.com/hugman/ltem/issues"
+  },
   "keywords": [
     "markdown",
     "table",

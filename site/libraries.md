@@ -5,7 +5,7 @@ outline: [2, 3]
 
 # Libraries
 
-LTEM comes with libraries in five languages: Python, TypeScript, Rust, Go and Lua. Each language has a core, and plugins connect LTEM to the Markdown parsers people already use. All libraries are at version 0.1.0, implement LTEM 1.0 and pass the [conformance tests](https://github.com/hugman/ltem/tree/main/conformance); the CodeMirror packages have their own version numbers.
+LTEM comes with libraries in five languages: Python, TypeScript, Rust, Go and Lua. Each language has a core, and plugins connect LTEM to the Markdown parsers people already use. All libraries are at version 0.1, implement LTEM 1.0 and pass the [conformance tests](https://github.com/hugman/ltem/tree/main/conformance); the CodeMirror packages have their own version numbers.
 
 A **core** parses LTEM into the [table model](https://github.com/hugman/ltem/tree/main/ast), validates a table against the specification's rules, renders HTML with real `colspan` and `rowspan`, and writes a table back as canonical LTEM. The Rust, TypeScript and Python cores also convert HTML tables to LTEM. A **plugin** replaces the host parser's table rule: LTEM handles the table structure, and the host parser still handles the text inside each cell, such as emphasis, links, code and math.
 

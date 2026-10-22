@@ -1,8 +1,18 @@
 {
   "name": "markdown-it-ltem",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "markdown-it plugin for LTEM tables: merged cells (colspan, rowspan) and multi-row headers",
   "license": "MIT",
+  "author": "EurekaAI Co., Ltd.",
+  "homepage": "https://hugman.github.io/ltem/",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hugman/ltem.git",
+    "directory": "ltem-lib/typescript/packages/markdown-it-ltem"
+  },
+  "bugs": {
+    "url": "https://github.com/hugman/ltem/issues"
+  },
   "keywords": [
     "markdown-it-plugin",
     "markdown-it",
@@ -36,7 +46,7 @@
     "clean": "node -e \"require('fs').rmSync('dist', { recursive: true, force: true })\""
   },
   "dependencies": {
-    "ltem-core": "0.1.0"
+    "ltem-core": "0.1.1"
   },
   "peerDependencies": {
     "markdown-it": "^14 || ^15"

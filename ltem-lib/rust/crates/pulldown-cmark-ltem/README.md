@@ -1,6 +1,6 @@
 # pulldown-cmark-ltem
 
-[pulldown-cmark](https://crates.io/crates/pulldown-cmark) adapter for [LTEM](../../../../README.md) tables: Markdown pipe tables with merged cells and multi-row headers.
+[pulldown-cmark](https://crates.io/crates/pulldown-cmark) adapter for [LTEM](https://hugman.github.io/ltem/) tables: Markdown pipe tables with merged cells and multi-row headers.
 
 ```
 | Region | Revenue | <<  |
@@ -95,4 +95,4 @@ The tests read the conformance cases from `conformance/cases/spec-examples.json`
 
 ## License
 
-MIT ([`LICENSE`](LICENSE)). The crate depends on the [`ltem`](../ltem/) core (MIT) and on pulldown-cmark (MIT), whose own dependencies are under MIT, Apache-2.0 or the Unlicense.
+MIT ([`LICENSE`](https://github.com/hugman/ltem/blob/main/ltem-lib/rust/crates/pulldown-cmark-ltem/LICENSE)). The crate depends on the [`ltem`](https://github.com/hugman/ltem/tree/main/ltem-lib/rust/crates/ltem) core (MIT) and on pulldown-cmark (MIT), whose own dependencies are under MIT, Apache-2.0 or the Unlicense.

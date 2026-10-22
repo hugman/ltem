@@ -3,6 +3,16 @@
   "version": "0.1.10",
   "description": "Live Preview for Markdown in CodeMirror 6, with LTEM tables: marks shown only where the cursor is, tables shown and edited as tables",
   "license": "MIT",
+  "author": "EurekaAI Co., Ltd.",
+  "homepage": "https://hugman.github.io/ltem/",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hugman/ltem.git",
+    "directory": "ltem-lib/typescript/packages/codemirror-ltem-live"
+  },
+  "bugs": {
+    "url": "https://github.com/hugman/ltem/issues"
+  },
   "keywords": [
     "codemirror",
     "codemirror6",
@@ -41,7 +51,7 @@
   "dependencies": {
     "codemirror-ltem": "0.2.11",
     "linkify-it": "^6.0.0",
-    "ltem-core": "0.1.0"
+    "ltem-core": "0.1.1"
   },
   "peerDependencies": {
     "@codemirror/lang-html": "^6.4.0",

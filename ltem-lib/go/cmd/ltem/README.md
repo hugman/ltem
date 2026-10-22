@@ -1,6 +1,6 @@
 # ltem command (Go)
 
-The `ltem` command: parse, render, validate and format LTEM (LLM-friendly Table-Enhanced Markdown) tables. It is built on the Go [`ltem`](../../ltem/) package, and renders cell text as CommonMark inlines with goldmark.
+The `ltem` command: parse, render, validate and format LTEM (LLM-friendly Table-Enhanced Markdown) tables. It is built on the Go [`ltem`](https://github.com/hugman/ltem/tree/main/ltem-lib/go/ltem) package, and renders cell text as CommonMark inlines with goldmark.
 
 Status: version 0.1.0, for LTEM 1.0. Not yet published.
 
@@ -24,13 +24,13 @@ ltem write    [FILE]           print the canonical LTEM of table models given as
 
 Input is read from FILE, or from standard input if FILE is missing or `-`. It must be UTF-8. Line endings `\r\n` and `\r` are read as `\n`.
 
-- `parse` prints `{"tables": [...]}` with one [table model](../../../../ast/table-model.md) per table.
+- `parse` prints `{"tables": [...]}` with one [table model](https://github.com/hugman/ltem/blob/main/ast/table-model.md) per table.
 - `render` prints one `<table>` element per table. Cell text is rendered as CommonMark inlines, raw HTML included.
 - `validate --json` prints `{"errors": [{"rule": ..., "row": ..., "col": ..., "severity": ...}]}`. Without `--json`, it prints one line per problem, such as `table 1: V13 at (1,0): '<<' has no cell to extend`. Warnings (V14) alone leave the exit status at 0.
 - `fmt` keeps everything outside tables as it is. A table keeps the indentation of its first line, so a table in a list item stays there. It finds tables with the light scan of the core, which does not model block quotes.
 - `write` reads one table model, or `{"tables": [...]}`, and prints the tables separated by blank lines.
 
-`parse`, `render`, `validate --json` and `write` follow the command-line protocol of the [conformance tests](../../../../conformance/). From the repository root:
+`parse`, `render`, `validate --json` and `write` follow the command-line protocol of the [conformance tests](https://github.com/hugman/ltem/tree/main/conformance). From the repository root:
 
 ```
 go -C ltem-lib/go build -o /tmp/ltem ./cmd/ltem
