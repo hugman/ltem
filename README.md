@@ -1,5 +1,7 @@
 # LTEM — LLM-friendly Table-Enhanced Markdown
 
+**Project page: <https://hugman.github.io/ltem/>** — the paper, guide, specification, libraries and an online playground.
+
 LTEM extends Markdown pipe tables so they can express merged cells and multi-row headers. An LTEM table stays plain, linear text that people and LLMs can read and write.
 
 ```
