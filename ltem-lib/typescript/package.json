@@ -4,7 +4,14 @@
   "description": "TypeScript workspace for LTEM: the core library and Markdown parser plugins",
   "type": "module",
   "workspaces": [
-    "packages/*"
+    "packages/ltem",
+    "packages/markdown-it-ltem",
+    "packages/marked-ltem",
+    "packages/micromark-extension-ltem",
+    "packages/mdast-util-ltem",
+    "packages/remark-ltem",
+    "packages/codemirror-ltem",
+    "packages/codemirror-ltem-live"
   ],
   "scripts": {
     "build": "npm run build --workspaces",

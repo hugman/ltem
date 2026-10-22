@@ -29,13 +29,10 @@ jobs:
           cache-dependency-path: |
             ltem-lib/typescript/package-lock.json
             site/package-lock.json
-      # ltem-core first: the other packages import it, and npm builds the
-      # workspaces in folder order (codemirror-ltem comes before ltem).
       - name: Build the TypeScript packages
         working-directory: ltem-lib/typescript
         run: |
           npm ci
-          npm run build -w ltem-core
           npm run build
       - name: Build the site
         working-directory: site
