@@ -26,11 +26,11 @@ A **core** parses LTEM into the [table model](https://github.com/hugman/ltem/tre
 | ^^                      | [`pulldown-cmark-ltem`](#rs-pulldown-cmark-ltem)     | pulldown-cmark adapter · *coming soon* |
 | ^^                      | [`mdbook-ltem`](#rs-mdbook-ltem)                     | mdBook preprocessor · *coming soon* |
 | ^^                      | [`comrak-ltem`](#rs-comrak-ltem)                     | comrak adapter · *coming soon* |
-| Go                      | [`ltem`](#go-ltem)                                   | Core package and `ltem` command · *coming soon* |
-| ^^                      | [`goldmarkltem`](#go-goldmarkltem)                   | goldmark extension · *coming soon* |
-| Lua                     | [`ltem.lua`](#lua-ltem-lua)                          | Core in pure Lua 5.4 · *coming soon* |
-| ^^                      | [Pandoc readers and filter](#lua-pandoc-readers-and-filter) | Pandoc · *coming soon* |
-| ^^                      | [Quarto extension](#lua-quarto-extension)            | Quarto · *coming soon* |
+| Go                      | [`ltem`](#go-ltem)                                   | Core package and `ltem` command |
+| ^^                      | [`goldmarkltem`](#go-goldmarkltem)                   | goldmark extension |
+| Lua                     | [`ltem.lua`](#lua-ltem-lua)                          | Core in pure Lua 5.4 |
+| ^^                      | [Pandoc readers and filter](#lua-pandoc-readers-and-filter) | Pandoc |
+| ^^                      | [Quarto extension](#lua-quarto-extension)            | Quarto |
 
 </div>
 

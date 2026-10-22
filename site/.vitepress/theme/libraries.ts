@@ -36,8 +36,8 @@ export interface Entry {
   what: string
   install?: string
   channel?: Channel
-  /** 'first' = released; 'soon' = listed with a "Coming soon" badge (registry packages
-   *  not yet published; Go, Lua, Pandoc and Quarto until their release, user 2026-10-22) */
+  /** Registry packages: 'first' = published; 'soon' = listed with a "Coming soon" badge.
+   *  Go, Lua, Pandoc and Quarto come from the repository and have no wave. */
   wave?: 'first' | 'soon'
   /** Path of its README folder in the repository */
   docs?: string
@@ -203,7 +203,6 @@ export const groups: Group[] = [
         what: 'Core package (standard library only) and the ltem command',
         install: 'go get github.com/hugman/ltem/ltem-lib/go@latest',
         channel: 'repo',
-        wave: 'soon',
         status: 'available',
       },
       {
@@ -212,7 +211,6 @@ export const groups: Group[] = [
         what: 'goldmark extension, for goldmark v1 and v2',
         install: 'import "github.com/hugman/ltem/ltem-lib/go/goldmarkltem"',
         channel: 'repo',
-        wave: 'soon',
         status: 'available',
       },
     ],
@@ -225,7 +223,6 @@ export const groups: Group[] = [
         name: 'ltem.lua',
         docs: 'ltem-lib/lua',
         what: 'Core in pure Lua 5.4, no C code',
-        wave: 'soon',
         status: 'available',
       },
       {
@@ -234,14 +231,12 @@ export const groups: Group[] = [
         what: 'Readers for Pandoc Markdown and commonmark_x with LTEM tables, and a filter for ```ltem blocks',
         install: 'pandoc -f ltem-markdown.lua in.md -o out.docx',
         channel: 'repo',
-        wave: 'soon',
         status: 'available',
       },
       {
         name: 'Quarto extension',
         docs: 'ltem-lib/lua',
         what: 'The filter for Quarto: it turns ```ltem blocks into tables',
-        wave: 'soon',
         status: 'available',
       },
     ],
