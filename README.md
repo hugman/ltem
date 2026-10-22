@@ -31,7 +31,23 @@ LTEM extends Markdown pipe tables so they can express merged cells and multi-row
 
 ## Paper
 
-Eunbin Kim, Hyeonseok Kang, Sangkeun Jung. *LTEM: LLM-Friendly Table-Enhanced Markdown for Table Understanding and Generation.* EMNLP 2026.
+Eunbin Kim, Hyeonseok Kang, Sangkeun Jung. *LTEM: LLM-Friendly Table-Enhanced Markdown for Table Understanding and Generation.* EMNLP 2026. [arXiv:2610.29188](https://arxiv.org/abs/2610.29188)
+
+If you use LTEM, please cite:
+
+```bibtex
+@inproceedings{kim-etal-2026-ltem,
+    title = "{LTEM}: {LLM}-Friendly Table-Enhanced Markdown for Table Understanding and Generation",
+    author = "Kim, Eunbin  and
+      Kang, Hyeonseok  and
+      Jung, Sangkeun",
+    booktitle = "Proceedings of the 2026 Conference on Empirical Methods in Natural Language Processing",
+    month = oct,
+    year = "2026",
+    address = "Budapest, Hungary",
+    publisher = "Association for Computational Linguistics"
+}
+```
 
 ## License
 
